@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 .background-container{
     background-image: url(assets/feest_achtergrond.jpg);
     height: 100vh;
@@ -11,6 +13,7 @@
 }
 
 .titel-1 {
+    font-family: 'Rubik', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +25,7 @@
 }
 
 .titel-2 {
+    font-family: 'Rubik', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
