@@ -47,13 +47,17 @@
 }
 
 .container{
-    font-family: 'Rubik', sans-serif;
-    justify-content: space-between;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 150px;
+    justify-content: space-between;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
 
+}
+
+.sign-button{
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
 }
