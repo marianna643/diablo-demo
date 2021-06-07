@@ -14,7 +14,7 @@
 
 .popup-inner{
     position: relative;
-    padding: 32px;
+    padding: 25px;
     width: 100%;
     max-width: 300px;
     background-color: #06070C;
@@ -33,12 +33,20 @@
 }
 
 .popup-inner.close-btn{
-    position: relative;
-    background-color: #06070C;
+    position: absolute;
+
+
 }
 
 .form-group{
     text-transform: none;
-    font-size: 16px;
+    font-size: 10px;
 }
 
+label {
+    width: 130px;
+}
+
+input, label {
+    display:block;
+}
