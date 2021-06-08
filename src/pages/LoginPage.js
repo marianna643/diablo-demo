@@ -1,12 +1,12 @@
 import React from 'react';
-import Footer from './Footer';
-import Popup from "../components/Popup";
+import Footer from '../components/Footer/Footer';
+import Popup from "../components/Login/Popup";
 
 
 
 
 
-    function HomePage() {
+    function LoginPage() {
         return (
             <div className="background-container">
                 <main>
@@ -20,4 +20,4 @@ import Popup from "../components/Popup";
         );
     }
 
-    export default HomePage;
+    export default LoginPage;

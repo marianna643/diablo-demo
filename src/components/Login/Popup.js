@@ -1,6 +1,6 @@
 import React from 'react';
 import './Popup.css';
-import myImage from '../assets/closebig.png';
+
 
 
 function Popup(props){
@@ -8,20 +8,22 @@ function Popup(props){
         <div className="popup">
             <form>
             <div className="popup-inner">
-                <h3>Sign in</h3>
-                <div className="close-btn"><img src={myImage} alt=""/></div>
+                <h3><strong>Sign</strong> in</h3>
+                {/* <div className="close-btn"><img src={myImage} alt=""/></div> */}
                 <div className="form-group">
-                     <label htmlFor="email">Email: </label>
+                     <label htmlFor="email">Email address:</label>
                 <input type="text" name="email" id="email"/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password:</label>
                     <input type="password" name="password" id="password"/>
                 </div>
-                <button className="signin-btn">Sign in</button>
-                {props.children}
+                <button type="button" className="sign-btn">
+                    Sign in
+                </button>
             </div>
             </form>
+            {props.children}
         </div>
     ) : "";
 }
