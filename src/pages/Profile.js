@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Profil () {
+
+function Profile () {
     return (
         <></>
     );
 }
 
-export default Profil;
+export default Profile;

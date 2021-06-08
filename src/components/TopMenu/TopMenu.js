@@ -7,9 +7,12 @@ function TopMenu() {
             <div className="nav-container">
                <h4>Demo Drop</h4>
                 <ul>
-                    <li>
-                        <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
+                    {/*  <li>
+                        <NavLink to="/" exact activeClassName="active-link">Sign in</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/home" exact activeClassName="active-link">Home</NavLink>
+                    </li>*/}
                     <li>
                         <NavLink to="/profile" exact activeClassName="active-link">Profile</NavLink>
                     </li>

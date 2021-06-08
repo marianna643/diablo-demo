@@ -6,13 +6,13 @@ import Popup from "../components/Login/Popup";
 
 
 
-    function LoginPage() {
+    function Login() {
         return (
             <div className="background-container">
                 <main>
                     <title className="titel-1">Diablo Studio</title>
                     <title className="titel-2">Demo Drop</title>
-                    <Popup trigger={true}>
+                    <Popup trigger={false}>
                     </Popup>
                     <Footer/>
                 </main>
@@ -20,4 +20,4 @@ import Popup from "../components/Login/Popup";
         );
     }
 
-    export default LoginPage;
+    export default Login;

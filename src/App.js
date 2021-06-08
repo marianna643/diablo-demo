@@ -3,13 +3,14 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import TopMenu from './components/TopMenu/TopMenu';
-import LoginPage from "./pages/LoginPage";
-import HomePage from './pages/HomePage';
-import ProfilePage from './pages/ProfilePage';
-import MyDemosPage from './pages/MyDemosPage';
-import DemoUpload from './pages/DemoUpload';
 import React from 'react';
+import TopMenu from './components/TopMenu/TopMenu';
+import TopMenuLogin from './components/TopMenu/TopMenuLogin';
+import Login from "./pages/Login";
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import MyDemos from './pages/MyDemos';
+import DemoUpload from './pages/DemoUpload';
 import './App.css';
 
 function App() {
@@ -17,18 +18,22 @@ function App() {
       <Router>
         <Switch>
             <Route exact path="/">
-                <LoginPage />
+                <TopMenuLogin />
+                <Login />
             </Route>
             <TopMenu />
-              <Route exact path="/home">
-                <HomePage />
+              <Route path="/home">
+                <Home />
               </Route>
+            <TopMenu />
               <Route path="/profile">
-                  <ProfilePage />
+                  <Profile />
               </Route>
+            <TopMenu />
               <Route path="/my-demos">
-                  <MyDemosPage />
+                  <MyDemos />
               </Route>
+            <TopMenu />
               <Route path="/demo-upload">
                   <DemoUpload />
               </Route>
