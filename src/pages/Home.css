@@ -15,6 +15,7 @@
     border: 1px solid white;
     display: flex;
     justify-content: center;
+    align-items: center;
 
 
 }
@@ -22,4 +23,34 @@
 h2{
     color: white;
     text-transform: uppercase;
+    font-family: 'Rubik', sans-serif;
+    font-size: 45px;
+}
+
+h5{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 30px;
+    left:650px;
+    bottom:0px;
+
+
+
+}
+
+.demoNavigatie{
+    background-color: #E8993D;
+    position: absolute;
+    padding: 15px;
+    margin-top: 200px;
+    margin-left: 200px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    width: 270px;
+    border-radius: 30px;
+    border-color: #E8993D;
 }
