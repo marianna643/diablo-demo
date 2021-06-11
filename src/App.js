@@ -1,44 +1,40 @@
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+    BrowserRouter as Router,
+    Switch,
+    Route, Link,
 } from 'react-router-dom';
 import React from 'react';
-import TopMenu from './components/TopMenu/TopMenu';
-import TopMenuLogin from './components/TopMenu/TopMenuLogin';
 import Login from "./pages/Login";
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import MyDemos from './pages/MyDemos';
 import DemoUpload from './pages/DemoUpload';
 import './App.css';
+import TopMenuLogin from "./components/TopMenu/TopMenuLogin";
 
 function App() {
-  return (
-      <Router>
-        <Switch>
-            <Route exact path="/">
-                <TopMenuLogin />
-                <Login />
-            </Route>
-            <TopMenu />
-              <Route path="/home">
-                <Home />
-              </Route>
-            <TopMenu />
-              <Route path="/profile">
-                  <Profile />
-              </Route>
-            <TopMenu />
-              <Route path="/my-demos">
+    return (
+        <div className="App">
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Login />
+                </Route>
+                <Route path="/home">
+                    < Home />
+                </Route>
+                <Route path="/profile">
+                    <Profile />
+                </Route>
+                <Route path="/my-demos">
                   <MyDemos />
-              </Route>
-            <TopMenu />
-              <Route path="/demo-upload">
+                </Route>
+                <Route path="/demo-upload">
                   <DemoUpload />
-              </Route>
-        </Switch>
+                </Route>
+            </Switch>
       </Router>
+    </div>
   );
 }
 
