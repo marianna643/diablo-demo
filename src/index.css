@@ -65,7 +65,7 @@ nav {
     background-color: #06070C;
     display: flex;
     justify-content: right;
-    height: 60px;
+    height: 40px;
 
 }
 
@@ -90,10 +90,8 @@ h4{
     text-transform: uppercase;
     position: absolute;
     left: 20px;
-    top: 20px;
-
-
-
+    top: 3px;
 
 
 }
+
