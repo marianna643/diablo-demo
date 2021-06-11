@@ -8,12 +8,12 @@ function Profile () {
     return (
         <>
             <TopMenu/>
+            <h1>My profile</h1>
             <div className="image-edit">
                 <img src={edit} width="80" height="80" />
             </div>
             <div className="profile">
                 <form>
-                    <h1>My profile</h1>
                         <div className="formProfile-group">
                         <label htmlFor="username">User Name *</label>
                         <input type="text" name="username" id="username"/>

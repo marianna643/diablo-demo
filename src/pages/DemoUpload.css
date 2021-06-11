@@ -1,13 +1,12 @@
-.image-edit{
-    width: 80px;
-    height: 80px;
-    background-color: #06070C;
-    margin-left: auto;
-    padding-right: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
+.image-upload {
+    background-image: url(../assets/bakelit.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0vh;
+    margin: 0vh;
+    border: none;
 }
 
 h1{
@@ -16,30 +15,23 @@ h1{
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    width:500px;
     text-align: center;
-    margin: auto;
-    padding-top: 150px;
-
 }
-.profile{
+
+.upload{
     margin: auto;
     padding: 25px;
     width: 100%;
     max-width: 1000px;
-    background-color: #06070C;
     font-family: Rubik, sans-serif;
-    font-size: 25px;
     color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 10px;
+    background-color:transparent;
 }
 
-.formProfile-group{
+.formUpdate-group {
     text-transform: none;
     font-size: 15px;
     letter-spacing: 1px;
-
 }
 
 input, label {
@@ -60,7 +52,7 @@ label{
 
 }
 
-.update-btn{
+.submit-btn {
     background-color: #E8993D;
     margin-top: 50px;
     padding: 10px;
@@ -71,5 +63,8 @@ label{
     width: 270px;
     border-radius: 30px;
     border-color: #E8993D;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
 }
