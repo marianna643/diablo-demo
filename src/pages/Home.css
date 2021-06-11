@@ -33,9 +33,10 @@ h5{
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 30px;
+    position:fixed;
     left:650px;
     bottom:0px;
-
+    height:65px;
 
 
 }
