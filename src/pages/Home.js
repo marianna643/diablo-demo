@@ -14,6 +14,9 @@ function Home () {
         <div className="image">
             <img src={demoDrop} width="600" height="900" />
         </div>
+        <div className="text-container">
+            <h2>"Drop it like it is hot"</h2>
+        </div>
     </div>
 
 

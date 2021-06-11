@@ -1,4 +1,25 @@
 .image{
     width: 600px;
     height: 900px;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.text-container{
+    width: 700px;
+    height: 370px;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translateY(-50%);
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+h2{
+    color: white;
+    text-transform: uppercase;
 }
