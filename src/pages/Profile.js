@@ -1,12 +1,16 @@
 import React from 'react';
 import TopMenu from '../components/TopMenu/TopMenu';
 import './Profile.css';
+import edit from "../assets/edit.png";
 
 
 function Profile () {
     return (
         <>
             <TopMenu/>
+            <div className="image-edit">
+                <img src={edit} width="80" height="80" />
+            </div>
             <div className="profile">
                 <form>
                     <h1>My profile</h1>
