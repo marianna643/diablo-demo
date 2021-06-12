@@ -10,7 +10,7 @@ function DemoUpload () {
            <div className="image-upload">
                <h1>Demo Upload</h1>
                <div className="mp3-container">
-               <h2>MP3 max 10MB</h2>
+               <h3>MP3 max 10MB</h3>
                    <button type="button" className="mp3-btn">
                        Choose file
                    </button>
