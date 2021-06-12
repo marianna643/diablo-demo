@@ -15,7 +15,7 @@ import './Login.css';
                     <title className="titel-1">Diablo Studio</title>
                     <title className="titel-2">Demo Drop</title>
                     <p>klik <Link to="/home">hier</Link> </p>
-                    <Popup trigger={false}>
+                    <Popup trigger={true}>
                     </Popup>
                     <Footer/>
                 </main>

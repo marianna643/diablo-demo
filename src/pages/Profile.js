@@ -8,7 +8,7 @@ function Profile () {
     return (
         <>
             <TopMenu/>
-            <h1>My profile</h1>
+            <h1 className="profile-h1">My profile</h1>
             <div className="image-edit">
                 <img src={edit} width="80" height="80" />
             </div>

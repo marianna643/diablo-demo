@@ -1,0 +1,32 @@
+.signOut-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+
+
+}
+
+.sign-h1 {
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: white;
+    padding-bottom: 50px;
+
+}
+
+.logIn-btn{
+    background-color: #E8993D;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding: 15px;
+    color: white;
+    width: 270px;
+    border-radius: 30px;
+    border-color: #E8993D;
+
+}

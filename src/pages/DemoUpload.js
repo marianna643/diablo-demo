@@ -8,9 +8,9 @@ function DemoUpload () {
        <>
            <TopMenu/>
            <div className="image-upload">
-               <h1>Demo Upload</h1>
+               <h1 className="upload-h1">Demo Upload</h1>
                <div className="mp3-container">
-               <h3>MP3 max 10MB</h3>
+               <h3 className="upload-h3">MP3 max 10MB</h3>
                    <button type="button" className="mp3-btn">
                        Choose file
                    </button>

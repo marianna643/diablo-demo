@@ -20,7 +20,7 @@
 
 }
 
-h2{
+.home-h2{
     color: white;
     text-transform: uppercase;
     font-family: 'Rubik', sans-serif;
@@ -28,7 +28,7 @@ h2{
 
 }
 
-h5{
+.home-h5{
     color:white;
     display: flex;
     flex-direction: row;
