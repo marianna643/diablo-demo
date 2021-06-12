@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../components/Footer/Footer';
 import Popup from "../components/Login/Popup";
 import {Link} from "react-router-dom";
+import './Login.css';
 
 
 

@@ -1,0 +1,36 @@
+.background-container{
+    background-image: url(../assets/feest_achtergrond.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0vh;
+    margin: 0vh ;
+    border: none;
+
+}
+
+.titel-1 {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: #ffffff;
+    font-size:72px;
+    text-transform: uppercase;
+}
+
+.titel-2 {
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    color: #ffffff;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+
