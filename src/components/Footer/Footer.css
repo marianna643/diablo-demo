@@ -1,6 +1,6 @@
 .footer{
     margin-top: 1rem;
-    padding: 1rem;
+   /* padding: 0rem; */
     background-color: #06070C;
     position: fixed;
     bottom: 0;
@@ -14,23 +14,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 350px;
+    width: 320px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
 
 }
 
 .sign-button{
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
+    font-family: "Rubik Medium", sans-serif;
     font-size: 18px;
     color: #ffffff;
     background-color: #06070C;
     border-color: #ffffff;
     text-transform: uppercase;
     border-radius: 20px;
-    padding: 3px;
+    padding: 5px;
     text-align: center;
-    width: 130px;
+    width: 110px;
     border-width: 1px;
 }

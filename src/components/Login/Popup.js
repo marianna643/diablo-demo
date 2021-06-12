@@ -1,5 +1,6 @@
 import React from 'react';
 import './Popup.css';
+import {Link} from "react-router-dom";
 
 
 
@@ -22,7 +23,8 @@ function Popup(props){
                     Sign in
                 </button>
             </div>
-            </form>
+                <Link to="/terms-service"> Terms of Service </Link>
+                </form>
             {props.children}
         </div>
     ) : "";

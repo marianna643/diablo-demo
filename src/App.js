@@ -10,7 +10,9 @@ import Profile from './pages/Profile';
 import MyDemos from './pages/MyDemos';
 import DemoUpload from './pages/DemoUpload';
 import SignOut from './pages/SignOut';
+import TermsOfService from "./pages/TermsOfService";
 import './App.css';
+
 
 
 
@@ -36,6 +38,9 @@ function App() {
                 </Route>
                 <Route path="/sign-out">
                     <SignOut />
+                </Route>
+                <Route path="/terms-service">
+                    <TermsOfService />
                 </Route>
             </Switch>
       </Router>

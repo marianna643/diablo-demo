@@ -72,8 +72,7 @@ label{
     background-color: #E8993D;
     margin-top: 50px;
     padding: 10px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
+    font-family: "Rubik Medium", sans-serif;
     font-size: 22px;
     color: white;
     width: 270px;
@@ -96,9 +95,8 @@ label{
 .mp3-btn{
     margin-left: 30px;
     padding: 6px;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik Medium", sans-serif;
     letter-spacing: 2px;
-    font-weight: bold;
     font-size: 17px;
     color: white;
     width: 200px;
