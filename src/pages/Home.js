@@ -17,7 +17,10 @@ function Home () {
         </div>
         <div className="text-container">
             <h2>"Drop it like it is hot"</h2>
-            <button type="button" className="demoNavigatie"  as={Link} to="/home"> I want to drop it </button>
+            <Link to="/demo-upload"><button type="button" className="demoNavigatie">
+                I want to drop it
+            </button>
+            </Link>
         </div>
         <h5>All demos are automatically submitted for the DIABLO STUDIO record label and Don Diablo’s radio show unless otherwise specified.</h5>
     </div>

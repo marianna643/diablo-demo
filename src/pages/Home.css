@@ -41,6 +41,14 @@ h5{
 
 }
 
+
+a:link{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+
 .demoNavigatie{
     background-color: #E8993D;
     position: absolute;
