@@ -26,9 +26,11 @@ function DemoUpload () {
                        <input type="text" name="title" id="title"/>
                    </div>
                    </form>
+                    <div className="submit-container">
                      <button type="submit" className="submit-btn">
                         Submit
                      </button>
+                    </div>
                 </div>
            </div>
        </>

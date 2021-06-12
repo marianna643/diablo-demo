@@ -54,6 +54,14 @@ label{
     align-items: flex-start;
 
 }
+.submit-container{
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+
+
+}
 
 .submit-btn {
     background-color: #E8993D;
@@ -66,10 +74,6 @@ label{
     width: 270px;
     border-radius: 30px;
     border-color: #E8993D;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
 }
 
 .mp3-container{
