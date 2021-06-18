@@ -22,8 +22,8 @@ function Popup(props){
                 <button type="button" className="sign-btn">
                     Sign in
                 </button>
+                <Link className="termsLink" to="/terms-service"> Terms of Service </Link>
             </div>
-                <Link to="/terms-service"> Terms of Service </Link>
                 </form>
             {props.children}
         </div>
