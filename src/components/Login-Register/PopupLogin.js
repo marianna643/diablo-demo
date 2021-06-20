@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
 import './PopupLogin.css';
 import {Link} from "react-router-dom";
+import myImage from "../Login-Register/assetLogin/close.png"
+
 
 
 
@@ -10,8 +11,10 @@ function PopupLogin(props){
         <div className="popup">
             <form>
             <div className="popup-inner">
+                <div className="headerButton-container">
                 <h3 className="popup-h3"><strong>Sign</strong> in</h3>
-                {/* <div className="close-btn"><img src={myImage} alt=""/></div> */}
+                <div className="close-btn" onClick={() => props.setTrigger (false)}><img src={myImage} alt=""/></div>
+                </div>
                 <div className="form-group">
                      <label className="sign-lab" htmlFor="email">Email address:</label>
                 <input className="sign-inp" type="text" name="email" id="email"/>

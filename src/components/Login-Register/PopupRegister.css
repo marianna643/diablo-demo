@@ -73,3 +73,10 @@ input, label {
     border-color: #E8993D;
 }
 
+.headerButtonRegister-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+
+}
