@@ -4,8 +4,8 @@ import {
     Route, Link,
 } from 'react-router-dom';
 import React from 'react';
-import Login from "./pages/Login";
-import Home from './pages/Home';
+import Home from "./pages/Home";
+import Diablo from './pages/Diablo';
 import Profile from './pages/Profile';
 import MyDemos from './pages/MyDemos';
 import DemoUpload from './pages/DemoUpload';
@@ -22,10 +22,10 @@ function App() {
         <Router>
             <Switch>
                 <Route exact path="/">
-                    <Login />
+                    <Home />
                 </Route>
-                <Route path="/home">
-                    < Home />
+                <Route path="/diablo">
+                    < Diablo />
                 </Route>
                 <Route path="/profile">
                     <Profile />

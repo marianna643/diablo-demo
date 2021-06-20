@@ -12,7 +12,7 @@ function TopMenu() {
                          <NavLink to="/" exact activeClassName="active-link">Sign in</NavLink>
                     </li>
                     <li>
-                         <NavLink to="/home" activeClassName="active-link">Home</NavLink>
+                         <NavLink to="/home" activeClassName="active-link">Diablo</NavLink>
                     </li>*/}
                     <li>
                         <NavLink to="/profile" activeClassName="active-link">Profile</NavLink>

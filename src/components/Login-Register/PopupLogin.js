@@ -1,10 +1,11 @@
-import React from 'react';
-import './Popup.css';
+import React, {useState} from 'react';
+import './PopupLogin.css';
 import {Link} from "react-router-dom";
 
 
 
-function Popup(props){
+
+function PopupLogin(props){
     return(props.trigger) ? (
         <div className="popup">
             <form>
@@ -19,15 +20,15 @@ function Popup(props){
                     <label className="sign-lab" htmlFor="password">Password:</label>
                     <input className="sign-inp" type="password" name="password" id="password"/>
                 </div>
-                <button type="button" className="sign-btn">
+                <button type="button" className="sign-btn" >
                     Sign in
                 </button>
                 <Link className="termsLink" to="/terms-service"> Terms of Service </Link>
             </div>
+                {props.children}
                 </form>
-            {props.children}
         </div>
     ) : "";
 }
 
-export default Popup;
+export default PopupLogin;
