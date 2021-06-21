@@ -22,7 +22,7 @@ function TermsOfService () {
                     The Content and the Marks are provided on the Site “AS IS” for your information and personal use only. Except as expressly provided in these Terms and Conditions, no part of the Site and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.
                     Provided that you are eligible to use the Site, you are granted a limited license to access and use the Site and to download or print a copy of any portion of the Content to which you have properly gained access solely for your personal, non-commercial use. We reserve all rights not expressly granted to you in and to the Site, the Content and the Marks.
                 </p> <br />
-            <h2 className="terms-h2" USER REPRESENTATIONS></h2> <br />
+            <h2 className="terms-h2"> USER REPRESENTATIONS</h2> <br />
 
                 <p>By using the Site, you represent and warrant that:
                 [(1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary;]

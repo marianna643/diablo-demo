@@ -10,7 +10,7 @@ function Profile () {
             <TopMenu/>
             <h1 className="profile-h1">My profile</h1>
             <div className="image-edit">
-                <img src={edit} width="80" height="80" />
+                <img src={edit}  alt= "" width="80" height="80" />
             </div>
             <div className="profile">
                 <form>

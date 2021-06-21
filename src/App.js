@@ -11,7 +11,12 @@ import MyDemos from './pages/MyDemos';
 import DemoUpload from './pages/DemoUpload';
 import SignOut from './pages/SignOut';
 import TermsOfService from "./pages/TermsOfService";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
+import Register from "./components/Login-Register/Register";
+import Login from "./components/Login-Register/Login";
 import './App.css';
+
 
 
 
@@ -23,6 +28,12 @@ function App() {
             <Switch>
                 <Route exact path="/">
                     <Home />
+                </Route>
+                <Route path="/register" component={Register}>
+                    <RegisterPage/>
+                </Route>
+                <Route  path="/login" component={Login}>
+                    <LoginPage/>
                 </Route>
                 <Route path="/diablo">
                     < Diablo />

@@ -13,7 +13,7 @@ function Diablo () {
     <div>
         <TopMenu/>
         <div className="image">
-            <img src={demoDrop} width="600" height="900" />
+            <img src={demoDrop} alt= "" width="600" height="900" />
         </div>
         <div className="text-container">
             <h2 className="home-h2">"Drop it like it is hot"</h2>
