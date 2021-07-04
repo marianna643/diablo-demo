@@ -2,77 +2,100 @@ import React,  { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './Register.css';
 import {Link, useHistory} from "react-router-dom";
+import axios from "axios";
 
 
 
 function Register() {
-    const {handleSubmit, register, formState: { errors }} = useForm();
+    const history = useHistory();
+    const { handleSubmit, register ,formState: { errors }} = useForm();
+    const [success, setSucces] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    const [password, setPassword] = useState("")
-    const onSubmitRegister = (data) => {
-        console.log(data);
-    };
+    async function onSubmit(data) {
+        console.log("DATA VAN DE GEBRUIKER??", data);
+        try {
+            setLoading(true);
+            const response = await axios.post("http://localhost:3000/register", {
+                email: data.email,
+                username: data.username,
+                password: data.password,
+                favoriteThing: "Programming stuff",
+            });
+            console.log(response);
+            setSucces(true);
+            setTimeout(() => history.push("/login"), 2000);
+        } catch (error) {
+            console.log("OH NO", error);
+        }
 
-    function validatePassword (value) {
-        if (password !== value) return false;
+        setLoading(false);
     }
 
-
     return (
-        <div className="popup">
-            <form form-group onSubmit={handleSubmit(onSubmitRegister)}>
-                <div className="popup-inner">
-                    <div className="headerButtonRegister-container">
-                    <h3 className="popup-h3">Sign up</h3>
-                    </div>
-                    <div className="form-group">
-                        <label className="sign-lab" htmlFor="email">Email address:</label>
-                        <input className="sign-inp"
-                               type="text" name="email"
-                               id="email"
-                               required={true}
-                               requiredError="Required."
-                               register={register}
-                               errors={errors}
-                               pattern={/^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/}
-                               patternError="Please enter a valid email address."
-                               />
-                    </div>
-                    <div className="form-group">
-                        <label className="sign-lab" htmlFor="password">Password:</label>
-                        <input className="sign-inp"
-                               type="password"
-                               name="password"
-                               id="password"
-                               required={true}
-                               requiredError="Required."
-                               register={register}
-                               errors={errors}
-                               minLength={8}
-                               minLengthError="The password has to be at least 8 characters."
+        <>
+            <p>{success && "Registeren is gelukt!"}</p>
+            <p>{loading && "Moment geduld aub"}</p>
+            <div className="form-container">
+                {!success && (
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className="form-inner">
+                            <h3 className="popup-h3">Sign up</h3>
+                            <label className="sign-lab" htmlFor="email-field">
+                                Email address: *
+                                <input className="sign-input"
+                                       type="email"
+                                       id="email-field"
+                                       name="email"
+                                       {...register("email", {
+                                           required: true,
+                                           pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
+                                       })}
+                                />
+                            </label>
+                            {errors?.email?.type === "required" && <p className="errorMessage">This field is required</p>}
+                            {errors?.email?.type === "pattern" &&
+                            (<p className="errorMessage">Please enter a valid email format</p>)}
 
-                               validate={(value) => validatePassword(value)}
-                               validateError="The passwords do not match."
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="sign-lab" htmlFor="passwordCheck">Confirm password:</label>
-                        <input className="sign-inp"
-                               type="password"
-                               name="passwordCheck"
-                               id="passwordCheck"
-                               value={password}
-                               onChange={(e)=>setPassword(e.target.value)}
-                    />
-                    </div>
-                    <button type="button" className="sign-btn" >
-                        Sign up
-                    </button>
-                    <p className="paragraph-form">Do you have an account? <Link className="signIn-link"to="/login">Sign In</Link> </p>
-                    </div>
-            </form>
-        </div>
+                            <label className="sign-lab" htmlFor="username-field">
+                                Username: *
+                                <input className="sign-input"
+                                       type="text"
+                                       id="username-field"
+                                       name="username"
+                                       {...register("username", {
+                                           required: true,
+                                       })}
+                                />
+                            </label>
+                            {errors?.username?.type === "required" && <p className="errorMessage">This field is required</p>}
+
+                            <label className="sign-lab" htmlFor="password-field">
+                                Password: *
+                                <input className="sign-input"
+                                       type="password"
+                                       id="password-field"
+                                       name="password"
+                                       {...register("password", {
+                                           required: true,
+                                           minLength: 8
+                                       })}
+                                />
+                            </label>
+                            {errors?.password?.type === "required" && <p className="errorMessage">This field is required</p>}
+                            {errors?.password?.type === "minLength" && (
+                                <p className="errorMessage">Password has to be minimum 8 character</p>
+                            )}
+                            <button disabled={loading} type="submit" className="sign-btn" >
+                                Sign up
+                            </button>
+                            <p className="paragraph-form">Do you have an account? <Link className="signIn-link"to="/login">Sign In</Link>{" "} </p>
+                        </div>
+                    </form>
+                )}
+            </div>
+        </>
     );
-  }
+}
 
 export default Register;
