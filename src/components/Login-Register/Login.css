@@ -1,4 +1,4 @@
-.popup{
+.form-container{
     position: fixed;
     top:0;
     left:0;
@@ -12,7 +12,7 @@
 
 }
 
-.popup-inner{
+.form-inner{
     position: relative;
     padding: 20px;
     width: 100%;
@@ -24,26 +24,16 @@
     text-transform: uppercase;
     letter-spacing: 10px;
 
-}
-
-.popup-inner.close-btn{
-    position: absolute;
-
 
 }
 
-.form-group{
-    text-transform: none;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
 
 .sign-lab {
-    width: 400px;
+    width: 300px;
     text-align: left;
 
-   }
-.sign-inp{
+}
+.sign-input{
     width: 300px;
     height: 40px;
     border-radius: 10px;
@@ -52,6 +42,7 @@
 
 input, label {
     display:block;
+
 }
 
 .popup-h3{
@@ -77,13 +68,6 @@ input, label {
 }
 
 
-.headerButton-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 35px;
-
-}
 
 .paragraph-form{
     text-transform: none;
