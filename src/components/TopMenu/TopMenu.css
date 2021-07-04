@@ -16,7 +16,7 @@ nav {
     width: 100%;
     background-color: #06070C;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     height: 40px;
     border-bottom: 1px solid white;
 
