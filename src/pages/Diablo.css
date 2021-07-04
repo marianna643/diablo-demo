@@ -25,6 +25,7 @@
     text-transform: uppercase;
     font-family: 'Rubik', sans-serif;
     font-size: 45px;
+    position: relative;
 
 }
 
@@ -62,4 +63,10 @@ a:link{
     width: 270px;
     border-radius: 30px;
     border-color: #E8993D;
+    top: 35%;
+    right:15%;
+
 }
+
+
+
