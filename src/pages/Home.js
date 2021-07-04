@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import {Link, useHistory} from "react-router-dom";
 import { useContext } from "react";
-import { authContext } from "../components/contexts/AuthContext";
+import { authContext } from "../components/context/AuthContext";
 
 
 function Home() {

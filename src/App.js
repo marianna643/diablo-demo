@@ -14,6 +14,7 @@ import TermsOfService from "./pages/TermsOfService";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import './App.css';
+import Demos from "./pages/Demos";
 
 
 
@@ -50,6 +51,9 @@ function App() {
                     </Route>
                     <Route path="/terms-service">
                         <TermsOfService />
+                    </Route>
+                    <Route path="/demos">
+                        <Demos />
                     </Route>
                 </Switch>
             </Router>
