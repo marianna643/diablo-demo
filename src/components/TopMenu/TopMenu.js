@@ -6,14 +6,11 @@ function TopMenu() {
     return (
         <nav>
             <div className="nav-container">
-               <h4>Demo Drop</h4>
+                {/*<h4>Demo Drop</h4>*/}
+                <li>
+                    <NavLink className="home-pagina" to="/diablo" activeClassName="active-link">Demo Drop</NavLink>
+                </li>
                 <ul>
-                    {/*<li>
-                         <NavLink to="/" exact activeClassName="active-link">Sign in</NavLink>
-                    </li>
-                    <li>
-                         <NavLink to="/home" activeClassName="active-link">Diablo</NavLink>
-                    </li>*/}
                     <li>
                         <NavLink to="/profile" activeClassName="active-link">Profile</NavLink>
                     </li>

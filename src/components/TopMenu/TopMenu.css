@@ -1,8 +1,17 @@
-a,
-a:visited,
-a:hover {
+a {
     color: white;
     text-decoration: none;
+}
+
+a:visited{
+    color: hsl(0, 0%, 100%)
+}
+a:hover{
+    color: #E8993D;
+}
+
+a.active-link {
+    color: #E8993D;
 }
 
 .nav-container {
@@ -33,12 +42,7 @@ ul {
 
 
 }
-
-.active-link {
-    color:white;
-}
-
-h4{
+.home-pagina {
     color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-size: 32px;
