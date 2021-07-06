@@ -32,7 +32,7 @@ function Login(){
         <>
             <div className="form-container">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-inner">
+                    <div className="form-inner-login">
                         <h3 className="popup-h3">Sign in</h3>
                         <label className="sign-lab" htmlFor="email-field">
                             Email address: *

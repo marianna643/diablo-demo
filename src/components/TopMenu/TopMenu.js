@@ -1,13 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './TopMenu.css';
+import {authContext} from "../context/AuthContext";
+import {useContext} from "react";
+
 
 function TopMenu() {
     return (
         <nav>
             <div className="nav-container">
                 {/*<h4>Demo Drop</h4>*/}
-                <li>
+<li>
                     <NavLink className="home-pagina" to="/diablo" activeClassName="active-link">Demo Drop</NavLink>
                 </li>
                 <ul>
@@ -34,3 +37,5 @@ function TopMenu() {
 }
 
 export default TopMenu;
+
+

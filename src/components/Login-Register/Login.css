@@ -12,9 +12,9 @@
 
 }
 
-.form-inner{
+.form-inner-login{
     position: relative;
-    padding: 20px;
+    padding: 50px 60px 40px 40px;
     width: 100%;
     max-width: 300px;
     background-color: #06070C;
@@ -36,8 +36,10 @@
 .sign-input{
     width: 300px;
     height: 40px;
-    border-radius: 10px;
+    border-radius:unset;
     margin-bottom: 8px;
+    color: white;
+    font-size: 11px;
 }
 
 input, label {
