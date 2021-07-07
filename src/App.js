@@ -15,6 +15,7 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import './App.css';
 import Demos from "./pages/Demos";
+import PrivateRouting from "../src/routing/PrivateRouting";
 
 
 
@@ -34,27 +35,27 @@ function App() {
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
-                    <Route path="/diablo">
+                    <PrivateRouting path="/diablo">
                         < Diablo />
-                    </Route>
-                    <Route path="/profile">
+                    </PrivateRouting>
+                    <PrivateRouting path="/profile">
                         <Profile />
-                    </Route>
-                    <Route path="/my-demos">
+                    </PrivateRouting>
+                    <PrivateRouting path="/my-demos">
                         <MyDemos />
-                    </Route>
-                    <Route path="/demo-upload">
+                    </PrivateRouting>
+                    <PrivateRouting path="/demo-upload">
                         <DemoUpload />
-                    </Route>
-                    <Route path="/sign-out">
+                    </PrivateRouting>
+                    <PrivateRouting path="/sign-out">
                         <SignOut />
-                    </Route>
+                    </PrivateRouting>
                     <Route path="/terms-service">
                         <TermsOfService />
                     </Route>
-                    <Route path="/demos">
+                    <PrivateRouting path="/demos">
                         <Demos />
-                    </Route>
+                    </PrivateRouting>
                 </Switch>
             </Router>
         </div>

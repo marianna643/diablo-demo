@@ -1,87 +1,120 @@
-import { createContext, useState, useEffect } from "react";
-import jwt_decode from "jwt-decode";
-import axios from "axios";
-import { useHistory } from "react-router-dom";
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 
-export const authContext = createContext({});
+const authContext = createContext({});
 
 function AuthContextProvider({ children }) {
-    const history = useHistory();
-    const [authState, setAuthState] = useState({ user: null, status: "pending" });
+    const [authState, setAuthState] = useState({
+        status: 'pending',
+        error: null,
+        user: null,
+    })
 
     useEffect(() => {
-        // @todo we proberen automatische in te loggen wanneer we nog een token hebben (later)
-        // setTimeout(() => setAuthState({ user: null, status: "done" }), 2000);
-        const token = localStorage.getItem("token");
-        if (token) {
-            login(token);
+        const token = localStorage.getItem('token');
+
+        async function getUserInfo() {
+            try {
+
+                const response = await axios.get('http://localhost:3000/600/users/${id}', {
+                        headers: {
+                            "Content-Type": "application/json",
+                            Authorization: `Bearer ${localStorage.getItem('token')}`
+                        },
+                    }
+                );
+
+                console.log(response);
+
+
+                setAuthState({
+                    ...authState,
+                    user: {
+                        id: response.id,
+                        username: response.username,
+                        email: response.email,
+                    },
+                    status: 'done',
+                });
+
+            } catch (e) {
+
+                console.log("kan gegevens niet ophalen");
+                setAuthState({
+                    ...authState,
+                    user: null,
+                    error: e,
+                    status: 'done'
+                });
+            }
+        }
+
+
+        if (authState.user === null && token) {
+            getUserInfo();
         } else {
-            setAuthState({ user: null, status: "done" });
-            history.push("/");
+
+            setAuthState({
+                ...authState,
+                error: null,
+                user: null,
+                status: 'done'
+            });
         }
     }, []);
 
-    async function getUserData(id, token) {
-        setAuthState({ user: null, status: "pending" });
-        try {
-            const response = await axios.get(
-                `http://localhost:3000/600/users/${id}`,
-                {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                }
-            );
+    function login(data){
+        localStorage.setItem('token',data.accessToken);
 
-            setAuthState({ user: response.data, status: "done" });
-           // history.push("/profile");
+        setAuthState({
+            ...authState,
+            user:{
+                username: data.username,
+                firstName: data.firstName,
+                lastName: data.lastName,
+                country: data.country,
+                email: data.email,
+                facebook: data.facebook,
+                instagram: data.instagram,
+                roles: data.roles
 
-            // Authorized POST request
-            // const response2 = await axios.post(
-            //   "http://localhost:3000/600/users",
-            //   {
-            //     email: "kees@kees.com",
-            //     password: "abcd1234",
-            //   },
-            //   {
-            //     headers: {
-            //       Authorization: `Bearer ${token}`,
-            //     },
-            //   }
-            // );
-            // console.log("USER DATA:", response2);
-        } catch (error) {}
-    }
-
-    async function login(token) {
-        // console.log("DO WE HAVE A TOKEN NAO?", token);
-        localStorage.setItem("token", token);
-        const dataFromToken = jwt_decode(token);
-        // console.log("WHAT IS IN THIS TOKEN THIING?", dataFromToken.sub);
-        const userId = dataFromToken.sub;
-
-        getUserData(userId, token);
+            }
+        })
     }
 
     function logout() {
-        // @todo
-        localStorage.removeItem("token");
-        setAuthState({ user: null, status: "done" });
-        history.push("/");
+        localStorage.clear();
+        setAuthState({
+            ...authState,
+            user: null,
+        })
     }
 
-    // deze data maken we beschikbaar in de context
-    const data = { authState: authState, login: login, logout: logout };
 
     return (
-        <authContext.Provider value={data}>
-            {/* Hier komt de rest van onze app */}
-            {authState.status === "pending" && <h1>Fetching you data! Hold on</h1>}
-            {authState.status === "done" && children}
+        <authContext.Provider value={{ ...authState, login, logout }}>
+            {authState.status === 'done' && children}
+            {authState.status === 'pending' && <p>Loading...</p>}
         </authContext.Provider>
     );
 }
 
-export default AuthContextProvider;
+function useAuthState() {
+    const authState = useContext(authContext);
 
 
+    const isDone = authState.status === 'done';
+    const isAuthenticated = authState.user !== null && isDone;
+
+
+    return {
+        ...authState,
+        isAuthenticated: isAuthenticated,
+    }
+}
+
+export {
+    authContext,
+    useAuthState,
+    AuthContextProvider,
+}
