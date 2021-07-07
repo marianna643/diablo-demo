@@ -1,28 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useContext } from "react";
 import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
-import { authContext } from "../context/AuthContext";
+import { authContext, useAuthState } from "../context/AuthContext";
 import './Login.css';
 
 function Login(){
     const { handleSubmit, register } = useForm();
     const { login } = useContext(authContext);
+    const { isAuthenticated } = useAuthState();
     console.log("AUTH STUFF:", login);
     const history = useHistory();
+
+    useEffect(() => {
+        if (isAuthenticated === true) {
+            history.push('/diablo');
+        }
+    }, [isAuthenticated]);
 
     async function onSubmit(data) {
         try {
             console.log("DATA UIT FORMULIER??", data);
-            const response = await axios.post("http://localhost:3000/login", {
-                email: data.email,
-                password: data.password,
+            const response= await axios.post('http://localhost:8080/api/auth/login',data,{
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                }
             });
-            console.log(response.data.accessToken);
-            // roep login aan met de token, zo kunnen we hem doorgeven naar de context (naar boven)
-            history.push("/diablo")
-            login(response.data.accessToken);
+            login(response.data);
         } catch (error) {
             console.log("Oh no", error);
         }
