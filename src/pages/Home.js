@@ -2,12 +2,12 @@ import React from 'react';
 import './Home.css';
 import {Link, useHistory} from "react-router-dom";
 import { useContext } from "react";
-import { authContext } from "../components/context/AuthContext";
+import { AuthContext } from "../components/context/AuthContext";
 
 
 function Home() {
     const history = useHistory();
-    const authData = useContext(authContext);
+    const authData = useContext(AuthContext);
     // console.log("WHAT IS IN THIS DATA?", authData); //
 
     return (

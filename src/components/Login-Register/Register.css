@@ -11,7 +11,7 @@
 
 }
 
-.form-inner-register{
+.signUp-form{
     position: relative;
     padding: 50px 60px 0px 40px;
     width: 100%;
@@ -23,8 +23,8 @@
     text-transform: uppercase;
     letter-spacing: 10px;
 
-
 }
+
 
 
 .sign-lab {
@@ -81,7 +81,6 @@ input, label {
     border-radius: 30px;
     border-color: #E8993D;
 }
-
 
 .errorMessage {
     color: red;

@@ -1,9 +1,10 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from "axios";
 
-const authContext = createContext({});
+const AuthContext = createContext({});
 
 function AuthContextProvider({ children }) {
+
     const [authState, setAuthState] = useState({
         status: 'pending',
         error: null,
@@ -15,17 +16,13 @@ function AuthContextProvider({ children }) {
 
         async function getUserInfo() {
             try {
-
-                const response = await axios.get('http://localhost:3000/600/users/${id}', {
+                const response = await axios.get(`http://localhost:8081/api/users/`, {
                         headers: {
                             "Content-Type": "application/json",
-                            Authorization: `Bearer ${localStorage.getItem('token')}`
+                            Authorization: `Bearer ${token}`,
                         },
                     }
                 );
-
-                console.log(response);
-
 
                 setAuthState({
                     ...authState,
@@ -37,9 +34,9 @@ function AuthContextProvider({ children }) {
                     status: 'done',
                 });
 
-            } catch (e) {
+                console.log(token)
 
-                console.log("kan gegevens niet ophalen");
+            } catch (e) {
                 setAuthState({
                     ...authState,
                     user: null,
@@ -49,11 +46,9 @@ function AuthContextProvider({ children }) {
             }
         }
 
-
         if (authState.user === null && token) {
             getUserInfo();
         } else {
-
             setAuthState({
                 ...authState,
                 error: null,
@@ -63,12 +58,11 @@ function AuthContextProvider({ children }) {
         }
     }, []);
 
-    function login(data){
-        localStorage.setItem('token',data.accessToken);
-
+    function login(data) {
+        localStorage.setItem('token', data.accessToken);
         setAuthState({
             ...authState,
-            user:{
+            user: {
                 username: data.username,
                 firstName: data.firstName,
                 lastName: data.lastName,
@@ -76,8 +70,7 @@ function AuthContextProvider({ children }) {
                 email: data.email,
                 facebook: data.facebook,
                 instagram: data.instagram,
-                roles: data.roles
-
+                isAdmin: data.roles.includes("ROLE_ADMIN"),
             }
         })
     }
@@ -89,32 +82,29 @@ function AuthContextProvider({ children }) {
             user: null,
         })
     }
-
-
     return (
-        <authContext.Provider value={{ ...authState, login, logout }}>
+        <AuthContext.Provider value={{ ...authState, login, logout}}>
             {authState.status === 'done' && children}
             {authState.status === 'pending' && <p>Loading...</p>}
-        </authContext.Provider>
+        </AuthContext.Provider>
     );
 }
 
 function useAuthState() {
-    const authState = useContext(authContext);
-
-
+    const authState = useContext(AuthContext);
     const isDone = authState.status === 'done';
     const isAuthenticated = authState.user !== null && isDone;
-
+    const isAdmin = authState.user !== null && authState.user.isAdmin;
 
     return {
         ...authState,
         isAuthenticated: isAuthenticated,
+        isAdmin: isAdmin,
     }
 }
 
 export {
-    authContext,
+    AuthContext,
     useAuthState,
     AuthContextProvider,
 }

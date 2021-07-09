@@ -1,158 +1,141 @@
 import React,  { useState } from 'react';
-import { useForm } from 'react-hook-form';
 import './Register.css';
 import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
 
 
 
-function Register() {
+function Register(){
     const history = useHistory();
-    const { handleSubmit, register ,formState: { errors }} = useForm();
-    const [success, setSucces] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [firstname, setFirstname] = useState('');
+    const [country, setCountry] = useState('');
+    const [instagram, setInstagram] = useState('');
+    const [facebook, setFacebook] = useState('');
+    const [createUserSuccess, setCreateUserSuccess] = useState(false);
+    const [loading, toggleLoading] = useState(false);
+    const [error, setError] = useState('');
 
-    async function onSubmit(data) {
-        console.log("DATA VAN DE GEBRUIKER??", data);
+
+    async function onSubmit(event) {
+        toggleLoading(true);
+        setError('');
+
+        event.preventDefault();
         try {
-            setLoading(true);
-            const response = await axios.post("http://localhost:3000/register", {
-                email: data.email,
-                username: data.username,
-                password: data.password,
-                favoriteThing: "Programming stuff",
+            const response = await axios.post('http://localhost:8081/api/auth/register', {
+                username: username,
+                firstname: firstname,
+                lastname: lastname,
+                country: country,
+                email: email,
+                password: password,
+                facebook: facebook,
+                instagram: instagram,
+                role: ["user"],
             });
-            console.log(response);
-            setSucces(true);
-            setTimeout(() => history.push("/login"), 2000);
-        } catch (error) {
-            console.log("OH NO", error);
-        }
 
-        setLoading(false);
+            if (response.status === 200) {
+                setCreateUserSuccess(true);
+                setTimeout(() => history.push("/login"), 2000);
+            }
+        } catch (e) {
+            console.error(e);
+            if (e.message.includes('400')) {
+                setError('User already exists');
+            } else {
+                setError('Something went wrong while fetching data');
+            }
+        }
+        toggleLoading(false);
     }
+
 
     return (
         <>
-            <p>{success && "Registeren is gelukt!"}</p>
-            <p>{loading && "Moment geduld aub"}</p>
             <div className="form-container">
-                {!success && (
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="form-inner-register">
+                {createUserSuccess === true && <p>User is created!</p>}
+                    <form className="signUp-form" onSubmit={onSubmit}>
                             <h3 className="popup-h3">Sign up</h3>
                             <label className="sign-lab" htmlFor="username-field">
-                                Username: *
+                                Username: * </label>
                                 <input className="sign-input"
                                        type="text"
                                        id="username-field"
-                                       name="username"
-                                       {...register("username", {
-                                           required: true,
-                                       })}
-                                />
-                            </label>
-                            {errors?.username?.type === "required" && <p className="errorMessage">This field is required</p>}
-
+                                       value={username}
+                                       onChange={(e) => setUsername(e.target.value)}>
+                                </input>
                             <label className="sign-lab" htmlFor="firstName-field">
-                                First name: *
+                                First name: * </label>
                                 <input className="sign-input"
                                        type="text"
                                        id="firstName-field"
-                                       name="firstname"
-                                       {...register("firstname", {
-                                           required: true,
-                                       })}
-                                />
-                            </label>
-                            {errors?.firstname?.type === "required" && <p className="errorMessage">This field is required</p>}
+                                       value={firstname}
+                                       onChange={(e) => setFirstname(e.target.value)}>
+                                </input>
 
                             <label className="sign-lab" htmlFor="lastName-field">
-                                Last name: *
+                                Last name: * </label>
                                 <input className="sign-input"
                                        type="text"
                                        id="lastName-field"
-                                       name="lastname"
-                                       {...register("lastname", {
-                                           required: true,
-                                       })}
-                                />
-                            </label>
-                            {errors?.lastname?.type === "required" && <p className="errorMessage">This field is required</p>}
+                                       value={lastname}
+                                       onChange={(e) => setLastname(e.target.value)}>
+                                </input>
 
                             <label className="sign-lab" htmlFor="country-field">
-                                Country: *
+                                Country: * </label>
                                 <input className="sign-input"
                                        type="text"
                                        id="country-field"
-                                       name="country"
-                                       {...register("country", {
-                                           required: true,
-                                       })}
-                                />
-                            </label>
-                            {errors?.country?.type === "required" && <p className="errorMessage">This field is required</p>}
-
+                                       value={country}
+                                       onChange={(e) => setCountry(e.target.value)}>
+                                </input>
 
                             <label className="sign-lab" htmlFor="email-field">
-                                Email address: *
+                                Email address: * </label>
                                 <input className="sign-input"
                                        type="email"
                                        id="email-field"
-                                       name="email"
-                                       {...register("email", {
-                                           required: true,
-                                           pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
-                                       })}
-                                />
-                            </label>
-                            {errors?.email?.type === "required" && <p className="errorMessage">This field is required</p>}
-                            {errors?.email?.type === "pattern" &&
-                            (<p className="errorMessage">Please enter a valid email format</p>)}
+                                       value={email}
+                                       onChange={(e) => setEmail(e.target.value)}>
+                                </input>
 
                             <label className="sign-lab" htmlFor="password-field">
-                                Password: *
+                                Password: * </label>
                                 <input className="sign-input"
                                        type="password"
                                        id="password-field"
-                                       name="password"
-                                       {...register("password", {
-                                           required: true,
-                                           minLength: 8
-                                       })}
-                                />
-                            </label>
-                            {errors?.password?.type === "required" && <p className="errorMessage">This field is required</p>}
-                            {errors?.password?.type === "minLength" && (
-                                <p className="errorMessage">Password has to be minimum 8 character</p>)}
+                                       value={password}
+                                       onChange={(e) => setPassword(e.target.value)}>
+                                </input>
 
                             <label className="sign-lab" htmlFor="facebook-field">
-                                Facebook:
+                                Facebook: </label>
                                 <input className="sign-input"
                                        type="text"
                                        id="facebook-field"
-                                       name="facebook"
-                                       {...register("facebook")}
-                                />
-                            </label>
+                                       value={facebook}
+                                       onChange={(e) => setFacebook(e.target.value)}>
+                                </input>
 
                             <label className="sign-lab" htmlFor="instagram-field">
-                                Instagram:
+                                Instagram: </label>
                                 <input className="sign-input"
                                        type="text"
                                        id="instagram-field"
-                                       name="instagram"
-                                       {...register("instagram")}
-                                />
-                            </label>
-
-                            <button disabled={loading} type="submit" className="sign-btn" >
-                                Sign up
+                                       value={instagram}
+                                       onChange={(e) => setInstagram(e.target.value)}>
+                                </input>
+                            <button type="submit" className="sign-btn" disabled={loading}>
+                                {loading ? "signing up" : "Sign Up"}
                             </button>
+                            {error && <p>{error}</p>}
                             <p className="paragraph-form">Do you have an account? <Link className="signIn-link"to="/login">Sign In</Link>{" "} </p>
-                        </div>
                     </form>
-                )}
             </div>
         </>
     );

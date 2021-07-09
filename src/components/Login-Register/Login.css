@@ -11,6 +11,19 @@
     align-items: center;
 
 }
+.signIn-form{
+    position: relative;
+    padding: 50px 60px 0px 40px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #06070C;
+    font-family: Rubik, sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+}
 
 .form-inner-login{
     position: relative;
