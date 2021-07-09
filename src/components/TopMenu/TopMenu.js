@@ -9,7 +9,7 @@ import {useContext} from "react";
 function TopMenu() {
 
     const { logout } = useContext(AuthContext);
-    const { isAuthenticated } = useAuthState();
+    const { user, isAuthenticated } = useAuthState();
     const history = useHistory();
 
 
@@ -20,6 +20,24 @@ function TopMenu() {
                 <li>
                     <NavLink className="home-pagina" to="/diablo" activeClassName="active-link">Demo Drop</NavLink>
                 </li>
+                {user && (user.roles).includes("ROLE_ADMIN") ? (
+                <ul>
+                <li>
+                <NavLink to="/profile" activeClassName="active-link">Profile</NavLink>
+                    </li>
+
+                    <li>
+                    <NavLink to="/my-demos" activeClassName="active-link">Demos</NavLink>
+                    </li>
+
+                    <li>
+                {isAuthenticated ? (
+                    <NavLink to="/sign-out" activeClassName="active-link" onClick={() =>logout()}>Sign out</NavLink>
+                    ):(
+                    history.push("/sign-out")
+                    )}
+                    </li>
+                    </ul> ):(
                 <ul>
                     <li>
                         <NavLink to="/profile" activeClassName="active-link">Profile</NavLink>
@@ -41,7 +59,7 @@ function TopMenu() {
                         )}
                     </li>
                 </ul>
-
+                )}
             </div>
         </nav>
     );

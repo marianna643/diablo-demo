@@ -64,12 +64,9 @@ function AuthContextProvider({ children }) {
             ...authState,
             user: {
                 username: data.username,
-                firstName: data.firstName,
-                lastName: data.lastName,
-                country: data.country,
                 email: data.email,
-                facebook: data.facebook,
-                instagram: data.instagram,
+                roles: data.roles,
+                id: data.id,
                 isAdmin: data.roles.includes("ROLE_ADMIN"),
             }
         })
