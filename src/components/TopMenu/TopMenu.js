@@ -1,16 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './TopMenu.css';
-import {authContext} from "../context/AuthContext";
+import { useHistory } from 'react-router-dom';
+import {AuthContext, useAuthState } from "../context/AuthContext";
 import {useContext} from "react";
 
 
 function TopMenu() {
+
+    const { logout } = useContext(AuthContext);
+    const { isAuthenticated } = useAuthState();
+    const history = useHistory();
+
+
     return (
         <nav>
             <div className="nav-container">
-                {/*<h4>Demo Drop</h4>*/}
-<li>
+                <h4>Demo Drop</h4>
+                <li>
                     <NavLink className="home-pagina" to="/diablo" activeClassName="active-link">Demo Drop</NavLink>
                 </li>
                 <ul>
@@ -27,7 +34,11 @@ function TopMenu() {
                     </li>
 
                     <li>
-                        <NavLink to="/sign-out" activeClassName="active-link">Sign out</NavLink>
+                        {isAuthenticated ? (
+                        <NavLink to="/sign-out" activeClassName="active-link" onClick={() =>logout()}>Sign out</NavLink>
+                        ):(
+                            history.push("/sign-out")
+                        )}
                     </li>
                 </ul>
 

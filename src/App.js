@@ -47,9 +47,9 @@ function App() {
                     <PrivateRouting path="/demo-upload">
                         <DemoUpload />
                     </PrivateRouting>
-                    <PrivateRouting path="/sign-out">
+                    <Route path="/sign-out">
                         <SignOut />
-                    </PrivateRouting>
+                    </Route>
                     <Route path="/terms-service">
                         <TermsOfService />
                     </Route>
