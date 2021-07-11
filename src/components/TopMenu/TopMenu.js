@@ -20,7 +20,6 @@ function TopMenu() {
                 <li>
                     <NavLink className="home-pagina" to="/diablo" activeClassName="active-link">Demo Drop</NavLink>
                 </li>
-                {user && (user.roles).includes("ROLE_ADMIN") ? (
                 <ul>
                 <li>
                 <NavLink to="/profile" activeClassName="active-link">Profile</NavLink>
@@ -37,7 +36,7 @@ function TopMenu() {
                     history.push("/sign-out")
                     )}
                     </li>
-                    </ul> ):(
+                    </ul>
                 <ul>
                     <li>
                         <NavLink to="/profile" activeClassName="active-link">Profile</NavLink>
@@ -59,7 +58,6 @@ function TopMenu() {
                         )}
                     </li>
                 </ul>
-                )}
             </div>
         </nav>
     );

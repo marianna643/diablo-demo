@@ -1,11 +1,11 @@
 import React from 'react';
-import TopMenuAdmin from '../components/TopMenu/TopMenuAdmin';
+import TopMenu from '../components/TopMenu/TopMenuAdmin';
 
 
 function Demos () {
     return (
         <>
-            <TopMenuAdmin/>
+            <TopMenu/>
             <p>
                 Admin page
             </p>
