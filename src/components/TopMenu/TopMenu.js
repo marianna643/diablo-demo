@@ -36,12 +36,11 @@ function TopMenu() {
                     history.push("/sign-out")
                     )}
                     </li>
-                    </ul>
-                <ul>
+                    {user && (user.roles).includes("ROLE_ADMIN") &&
                     <li>
                         <NavLink to="/profile" activeClassName="active-link">Profile</NavLink>
                     </li>
-
+                    <>
                     <li>
                         <NavLink to="/my-demos" activeClassName="active-link">MyDemos</NavLink>
                     </li>
@@ -57,6 +56,7 @@ function TopMenu() {
                             history.push("/sign-out")
                         )}
                     </li>
+                        </>
                 </ul>
             </div>
         </nav>
