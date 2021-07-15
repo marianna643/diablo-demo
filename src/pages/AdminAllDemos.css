@@ -1,0 +1,22 @@
+.demosPage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.pageCard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+}
+
+.noUploads {
+    color: white;
+    display: flex;
+    text-transform: uppercase;
+    margin:50px;
+}
