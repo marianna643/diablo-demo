@@ -1,16 +1,58 @@
-import React from 'react';
-import TopMenu from '../components/TopMenu/TopMenu';
+import React from "react";
+import "./MyDemos.css";
+import {useEffect, useState} from "react";
+import axios from "axios";
+import UserItemCard from "../components/itemCard/UserItemCard";
+import {Link} from "react-router-dom";
+import disc from "../assets/adddemo.png";
 
+function MyDemos() {
+    const [uploads, setUploads] = useState([]);
+    const [error, setError] = useState('');
 
-function MyDemos () {
+    useEffect(() => {
+        async function getProtectedData() {
+            setError('');
+            try {
+                const token = localStorage.getItem('token');
+                const response = await axios.get(`http://localhost:8081/api/files/uploads/`, {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    }
+                })
+                setUploads(response.data);
+            } catch(e) {
+                setError('Something went wrong while fetching data')
+            }
+        }
+        getProtectedData();
+    }, []);
+
     return (
         <>
-            <TopMenu/>
-            <p>
-                Consectetur adipisicing elit. Consequuntur doloremque esse fuga illum, impedit necessitatibus non officiis sapiente tempora velit.
-                Amet consequuntur deleniti distinctio ea eveniet id, labore magni neque obcaecati praesentium quibusdam quidem, quod, repellat sequi ut.
-                Blanditiis, reiciendis.
-            </p>
+            <div className="demosPage-container">
+                <div className="add-demo-img">
+                    <Link to="/demo-upload"> <img src={disc}  alt= "" width="120" height="110" /></Link>
+                </div>
+                {uploads.length > 0 ?
+                    <>
+                        <div className="pageCard-container">
+                            {uploads.map((upload)=>{
+                                return <UserItemCard title={upload.demo}
+                                                     message={upload.message}
+                                                     key={upload.id}
+                                                     name={upload.name}
+                                                     artist={upload.artist}
+                                                     titel={upload.titel}
+                                                     children="open"
+                                                     link={`/api/files/uploads/${upload.id}`}
+                                                     feedback={upload.feedback}/>
+                            })}
+                        </div>
+                    </> :
+                    <p className="noUploads">You can start to drop it your demo by clicking the disc icon!</p>}
+            </div>
         </>
     );
 }

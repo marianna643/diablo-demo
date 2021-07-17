@@ -1,0 +1,27 @@
+.no-upload {
+    color: white;
+}
+
+.add-demo-img {
+    display: flex;
+    justify-content: left;
+    width:100%;
+    padding: 20px;
+    margin-right: auto;
+    width: 20%;
+    padding: 20px;
+
+}
+
+
+.no-upload {
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+u {
+    padding-left:5px;
+    padding-right: 5px;
+}
