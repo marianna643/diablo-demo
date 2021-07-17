@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState}from 'react';
 import './Profile.css';
-import { useAuthState} from "../components/contexts/AuthContext";
+import { useAuthState} from "../components/context/AuthContext";
 import axios from "axios";
 import edit from "../assets/edit.png";
 

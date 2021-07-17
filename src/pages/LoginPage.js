@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useContext } from "react";
 import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
-import {authContext, useAuthState} from "../components/contexts/AuthContext";
+import {authContext, useAuthState} from "../components/context/AuthContext";
 import './LoginPage.css';
 
 function Login(){
