@@ -62,21 +62,6 @@
     margin-bottom: 70px;
 }
 
-.signIn-button{
-    font-family: "Rubik Medium", sans-serif;
-    font-size: 18px;
-    color: #ffffff;
-    background-color: #06070C;
-    border-color: #ffffff;
-    text-transform: uppercase;
-    border-radius: 20px;
-    padding: 5px;
-    text-align: center;
-    width: 110px;
-    border-width: 1px;
-    margin-right: 30px;
-    margin-bottom: 70px;
-}
 
 .form-container{
     position: fixed;
