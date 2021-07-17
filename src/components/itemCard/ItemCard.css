@@ -1,0 +1,94 @@
+
+.itemCard-image-container{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 80px;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    color: white;
+    padding:10px;
+
+
+}
+
+
+.linkTo-details {
+    text-decoration: none;
+    background-color: #E8993D;
+    padding: 15px 50px 15px 50px;
+    border-radius: 30px;
+    font-family: "Rubik Medium", sans-serif;
+    font-size: 20px;
+}
+
+.linkTo-details:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.linkTo-details:hover {
+    text-decoration: none;
+    color: black;
+}
+.cardUser {
+    color: #E8993D;
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+
+.cardTitle, .feedback-container, .message-container, .artist-container, .songTitel-container, .demo-container {
+    padding-bottom:10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+
+}
+
+.feedback-container {
+    background-color: #E8993D;
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-left: 8px;
+    font-family: "Rubik Medium", sans-serif;
+    opacity: 0.8;
+
+
+}
+
+.item-container {
+    height: 300px;
+    width: 300px;
+    background-color: #1f1f24;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 6px 5px 2px #121215;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+
+.cardTitle-label, .cardArtist-label, .cardSong-label, .cardMessage-label{
+    font-family: "Rubik Medium", sans-serif;
+    font-size: 13px;
+}
+
+.cardMessage-label {
+    padding-bottom: 10px;
+}
+
+.messageAdmin-container {
+    background-color: #E8993D;
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    font-family: "Rubik Medium", sans-serif;
+    opacity: 0.8;
+    text-align: left;
+}

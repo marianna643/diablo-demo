@@ -2,7 +2,7 @@ import React from 'react';
 import  {useAuthState}  from '../components/context/AuthContext';
 import { Redirect, Route } from 'react-router-dom';
 
-function PrivateRouting ({ children, ...rest }) {
+function PrivateRoute ({ children, ...rest }) {
     const { isAuthenticated } = useAuthState();
 
     return (
@@ -12,4 +12,4 @@ function PrivateRouting ({ children, ...rest }) {
     );
 }
 
-export default PrivateRouting;
+export default PrivateRoute;

@@ -1,0 +1,134 @@
+.reviewPage-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #06070C;
+    width: 50%;
+}
+
+.reviewTitle {
+    font-size: 16px;
+    color:white;
+}
+
+.reviewUpload-user {
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+
+
+.reviewFeedback-container {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviewFeedback-comment {
+    resize: none;
+    width: 50%;
+    margin-bottom: 30px;
+    height: 30px;
+}
+
+.reviewFeedback-label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 1000px;
+}
+
+.show-feedback {
+    width: 50%;
+    margin: 30px;
+}
+
+
+.demoName{
+    font-size: 15px;
+}
+
+.audio-container {
+    background-color: #E8993D;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
+
+a.download-demo {
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    font-family: "Rubik Medium",sans-serif;
+
+}
+
+a.download-demo:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.reviewUpload-label{
+    font-size: 16px;
+    color: #E8993D;
+    padding-bottom: 30px;
+
+
+}
+
+. reviewMessage {
+    color: white;
+}
+
+
+
+.reviewMessage-message{
+    background-color: #E8993D;
+    opacity: 0.7 ;
+    border-radius: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: "Rubik Medium", sans-serif;
+    color: white;
+
+
+}
+
+.reviewTitle, .reviewMessage-message, .reviewFeedback-comment {
+    display: block;
+    width: 1000px;
+    height: 40px;
+    margin-bottom: 60px;
+    border-bottom:1px solid white;
+    border-radius: 0px;
+    padding-top: 20px;
+}
+
+.reviewTitle-label, .reviewMessage-message-label, .reviewFeedback-label {
+    padding: 8px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+
+}
+
+.reviewTitle, .reviewMessage-message {
+    border-bottom: none;
+}
+
+input.reviewFeedback-comment {
+    color: white;
+    font-size: 15px;
+}

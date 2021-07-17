@@ -1,5 +1,4 @@
 import React from 'react';
-import TopMenu from '../components/TopMenu/TopMenu';
 import { Link } from 'react-router-dom';
 import demoDrop from '../assets/demodrop.jpg';
 import './Diablo.css';
@@ -11,7 +10,6 @@ import './Diablo.css';
 function Diablo () {
     return (
         <div>
-            <TopMenu/>
             <div className="image">
                 <img src={demoDrop} alt= "" width="600" height="900" />
             </div>

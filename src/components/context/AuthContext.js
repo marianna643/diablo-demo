@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import axios from "axios";
 
-const AuthContext = createContext({});
+const authContext = createContext({});
 
 function AuthContextProvider({ children }) {
 
@@ -67,6 +67,11 @@ function AuthContextProvider({ children }) {
                 email: data.email,
                 roles: data.roles,
                 id: data.id,
+                firstName: data.firstName,
+                lastName: data.lastName,
+                country: data.country,
+                facebook: data.facebook,
+                instagram: data.instagram,
                 isAdmin: data.roles.includes("ROLE_ADMIN"),
             }
         })
@@ -80,15 +85,15 @@ function AuthContextProvider({ children }) {
         })
     }
     return (
-        <AuthContext.Provider value={{ ...authState, login, logout}}>
+        <authContext.Provider value={{ ...authState, login, logout}}>
             {authState.status === 'done' && children}
             {authState.status === 'pending' && <p>Loading...</p>}
-        </AuthContext.Provider>
+        </authContext.Provider>
     );
 }
 
 function useAuthState() {
-    const authState = useContext(AuthContext);
+    const authState = useContext(authContext);
     const isDone = authState.status === 'done';
     const isAuthenticated = authState.user !== null && isDone;
     const isAdmin = authState.user !== null && authState.user.isAdmin;
@@ -101,7 +106,7 @@ function useAuthState() {
 }
 
 export {
-    AuthContext,
+    authContext,
     useAuthState,
     AuthContextProvider,
 }

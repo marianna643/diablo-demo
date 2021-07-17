@@ -1,16 +1,29 @@
-a {
+.home-pagina {
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 20px;
+    top: 3px;
+}
+a, a.home-pagina {
     color: white;
     text-decoration: none;
 }
 
-a:visited{
-    color: hsl(0, 0%, 100%)
-}
-a:hover{
+a:hover {
     color: #E8993D;
 }
 
 a.active-link {
+    color: #E8993D;
+}
+
+a.home-pagina.active-link{
+    color: white;
+}
+a.home-pagina:hover{
     color: #E8993D;
 }
 
@@ -42,7 +55,12 @@ ul {
 
 
 }
-.home-pagina {
+
+.active-link {
+    color:white;
+}
+
+h4{
     color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-size: 32px;
@@ -53,3 +71,6 @@ ul {
 
 
 }
+
+
+
