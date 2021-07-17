@@ -1,4 +1,4 @@
-.image-edit{
+.image-edit {
     width: 80px;
     height: 80px;
     background-color: #06070C;
@@ -10,30 +10,20 @@
 
 }
 
-.profile-h1{
-    font-family: 'Rubik', sans-serif;
-    font-size: 60px;
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    width:500px;
-    text-align: center;
-    margin: auto;
-    padding-top: 150px;
+}
 
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.profile{
-    margin: auto;
-    padding: 25px;
-    width: 100%;
-    max-width: 1000px;
-    background-color: #06070C;
-    font-family: Rubik, sans-serif;
-    font-size: 25px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
+
+
 
 .formProfile-group{
     text-transform: none;
@@ -42,21 +32,36 @@
 
 }
 
-input, label {
+.formProfile-data{
     display: block;
-}
-
-input{
     width: 1000px;
     height: 40px;
-    border-radius: 10px;
     margin-bottom: 20px;
+    border-bottom:1px solid white;
+    border-radius: 0px;
+    padding-top: 20px;
 }
 
-label{
+.formProfile-label{
     padding: 8px;
     display: flex;
     align-items: flex-start;
+    font-size: 12px;
+
+
+}
+
+.profile-h1{
+    font-family: "Rubik Medium", sans-serif;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width:500px;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
 
 }
 
