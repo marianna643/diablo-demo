@@ -24,6 +24,7 @@ function AuthContextProvider({ children }) {
                     }
                 );
 
+                //Authstate annvullen door axios get
                 setAuthState({
                     ...authState,
                     user: {
@@ -59,6 +60,8 @@ function AuthContextProvider({ children }) {
     }, []);
 
     function login(data) {
+
+        //accestoken in de localstorage
         localStorage.setItem('token', data.accessToken);
         setAuthState({
             ...authState,
@@ -78,6 +81,7 @@ function AuthContextProvider({ children }) {
     }
 
     function logout() {
+        //clear accestoken uit van localstorage
         localStorage.clear();
         setAuthState({
             ...authState,
@@ -94,9 +98,9 @@ function AuthContextProvider({ children }) {
 
 function useAuthState() {
     const authState = useContext(authContext);
-    const isDone = authState.status === 'done';
+    const isDone = authState.status === 'done'; //geauthoriseerd wanneer status is done
     const isAuthenticated = authState.user !== null && isDone;
-    const isAdmin = authState.user !== null && authState.user.isAdmin;
+    const isAdmin = authState.user !== null && authState.user.isAdmin; // admin als de gebruiker in de Autstate en status is done and heeft isAdmin attribuut
 
     return {
         ...authState,
