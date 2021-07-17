@@ -4,7 +4,6 @@ import {
     Route,
 } from 'react-router-dom';
 import React from "react";
-import Home from "./pages/Home";
 import Diablo from './pages/Diablo';
 import Profile from './pages/Profile';
 import MyDemos from './pages/MyDemos';
@@ -13,9 +12,13 @@ import SignOut from './pages/SignOut';
 import TermsOfService from "./pages/TermsOfService";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
+import PrivateRoute from "./routing/PrivateRoute";
+import AdminAllDemos from "./pages/AdminAllDemos";
+import ReviewPage from "./pages/ReviewPage";
+import  Header  from "./components/header/Header";
 import './App.css';
-import Demos from "./pages/Demos";
-import PrivateRouting from "../src/routing/PrivateRouting";
+
+
 
 
 
@@ -39,7 +42,7 @@ function App() {
                     <PrivateRoute path="/my-demos">
                         <MyDemos />
                     </PrivateRoute>
-                    <PrivateRoute path="/review">
+                    <PrivateRoute path="/api/files/uploads/:id">
                         <ReviewPage/>
                     </PrivateRoute>
                     <PrivateRoute path="/all-demos">
@@ -58,8 +61,9 @@ function App() {
                         <TermsOfService />
                     </Route>
                 </Switch>
-            </Router>
-        </div>
+            </div>
+        </Router>
+
     );
 }
 
