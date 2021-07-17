@@ -22,7 +22,7 @@ function ItemCard({ title, message,feedback, name, artist, titel}) {
                         <p className="cardSongTitel">{titel}</p>
                     </div>
                     <div className="message-container">
-                        <label className="cardMessage-label">Message from uploader</label>
+                        <label className="cardMessage-label">Message:</label>
                         <p className="cardMessage">{message}</p>
                     </div>
                     <div className="feedback-container">

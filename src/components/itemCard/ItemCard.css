@@ -41,7 +41,7 @@
 }
 
 
-.cardTitle, .feedback-container, .message-container, .artist-container, .songTitel-container, .demo-container {
+.cardTitle, .feedback-container, .message-container, .artist-container, .songTitel-container, .demo-container, .feedbackAdmin-container  {
     padding-bottom:10px;
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,7 @@
 
 }
 
-.cardTitle-label, .cardArtist-label, .cardSong-label, .cardMessage-label{
+.cardTitle-label, .cardArtist-label, .cardSong-label, .cardMessage-label, .feedbackAdmin-label{
     font-family: "Rubik Medium", sans-serif;
     font-size: 13px;
 }

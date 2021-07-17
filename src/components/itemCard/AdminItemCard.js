@@ -1,7 +1,7 @@
 import React from "react";
 import "./ItemCard.css"
 
-function AdminItemCard({ children, title, message,link, name, artist, titel}) {
+function AdminItemCard({ children, title, message,link, name, artist, titel, feedback}) {
     return (
         <>
             <div className="item-container">
@@ -19,6 +19,10 @@ function AdminItemCard({ children, title, message,link, name, artist, titel}) {
                 <div className="songTitel-container">
                     <label className="cardSong-label">Song titel</label>
                     <p className="cardSongTitel">{titel}</p>
+                </div>
+                <div className="feedbackAdmin-container">
+                    <label className="feedbackAdmin-label">Feedback</label>
+                    <p className="cardFeedback">{feedback}</p>
                 </div>
                 <div className="messageAdmin-container">
                     <p className="cardMessage">Message from uploader:{message}</p>
