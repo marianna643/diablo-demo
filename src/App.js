@@ -48,7 +48,7 @@ function App() {
                     <Route path="/sign-out">
                         <SignOut />
                     </Route>
-                    <Route path="/register">
+                    <Route path="/signup">
                         <RegisterPage/>
                     </Route>
                     <Route path="/login">
