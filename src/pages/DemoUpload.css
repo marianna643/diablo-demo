@@ -10,12 +10,13 @@
 }
 
 .upload-h1{
-    font-family: 'Rubik', sans-serif;
+    font-family:"Rubik Medium", sans-serif;
     font-size: 60px;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 30px;
     margin-bottom:30px;
 }
 
@@ -36,7 +37,7 @@
     background-color:transparent;
 }
 
-.formUpdate-group {
+.formUpload-group {
     text-transform: none;
     font-size: 15px;
     letter-spacing: 1px;
@@ -44,17 +45,20 @@
 
 input, label {
     display: block;
-    font-color:white;
+    color: white;
 }
 
-input{
+input.form-upload{
     width: 1000px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 0px;
     margin-bottom: 20px;
+    font-size: 15px;
+    color: white;
+
 }
 
-label{
+label.form-title{
     padding: 8px;
     display: flex;
     align-items: flex-start;
@@ -81,17 +85,7 @@ label{
     border-color: #E8993D;
 }
 
-.mp3-container{
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 1000px;
-    padding-left: 30px;
-    margin-left: auto;
-    margin-right: auto;
 
-}
 
 .mp3-btn{
     margin-left: 30px;
@@ -107,3 +101,56 @@ label{
     background-repeat:no-repeat;
 }
 
+*/
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.upload-form {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px;
+    width: 50%;
+}
+
+.form-item {
+    margin: 10px;
+    width: 100%;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    height: 30px;
+}
+
+.form-input-comment {
+    resize: none;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+.submit-btn {
+    background-color: #E8993D;
+    margin-top: 50px;
+    padding: 10px;
+    font-family: "Rubik Medium", sans-serif;
+    font-size: 22px;
+    color: white;
+    width: 270px;
+    border-radius: 30px;
+    border-color: #E8993D;
+}
+
+.uploadProgress-line{
+    text-transform: uppercase;
+}
