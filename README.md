@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+Welkom, hier is de Diablo Demo Drop applicatie!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Open het backend project wat staat onder https://github.com/marianna643/final-backend-demod en run het project.
+2. Open deze project op jouw lokale machine in Webstorm en voer het command "npm install" in de Terminal
+3. Vervolgens het command "npm start"
 
-## Available Scripts
+Via http://localhost:3000 te bekijken.
+Voor uitgebreide installatiestappen volg de installatiehandleiding document.
 
-In the project directory, you can run:
 
-### `npm start`
+Hieronder een aantal screenschots over hoe de applicatie werkt.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Login pagina
+![testlogin](https://user-images.githubusercontent.com/79861156/126066078-b6435b6d-14ab-413b-a2d9-79e2bf9d941f.JPG)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Registratie pagina
+![leegsignup](https://user-images.githubusercontent.com/79861156/126066094-41fa8fcb-b73f-45f8-bc11-7b024b38c675.JPG)
 
-### `npm test`
+Als je ingelogd bent kom je uit bij de Home pagina. Van hier kun je naar de Demo upload pagina gaan met behulp van de "I want to drop it" knop.
+![home](https://user-images.githubusercontent.com/79861156/126066106-2cc96308-7337-4289-9864-c4bc47e64d30.JPG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+DemoUpload pagina: Hier kun je een Demo uploaden met attribute.
+![DemoUpload](https://user-images.githubusercontent.com/79861156/126066158-e8567b10-0dba-4672-ae98-269272570028.JPG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Daarna kun je jouw eigen demos bekijken onder de Mydemos pagina en een nieuw demo toevoegen.
+![MydemosUser](https://user-images.githubusercontent.com/79861156/126066234-53d6d897-e599-4fa1-9030-b4093bf4f0fa.JPG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Met admin rol kun je alle geuplode demos bekijken onder de Review menu.
+![AdminReview1](https://user-images.githubusercontent.com/79861156/126066306-39634836-a551-4105-a1ff-d9c137320b48.JPG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Als je op de "Check out" klikt kom je bij een apart pagina waar kun je Review geven, de demos beluisteren en downloaden.
+![full Adminreview](https://user-images.githubusercontent.com/79861156/126066361-7f33a6a6-e7e2-4548-8fb1-48de32e77e0f.JPG)
 
-### `npm run eject`
+Met user rol kun je de review bekijken van de admin onder de Mydemos pagina
+![FeedbackUserDemos](https://user-images.githubusercontent.com/79861156/126066430-f81157a4-0bb2-4c00-8d9b-df08389715e5.JPG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Veel plezier!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
