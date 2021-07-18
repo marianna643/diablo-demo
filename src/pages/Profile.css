@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
 }
 
 .page-container {
@@ -25,14 +24,14 @@
 
 
 
-.formProfile-group{
+.formProfile-group {
     text-transform: none;
     font-size: 15px;
     letter-spacing: 1px;
 
 }
 
-.formProfile-data{
+.formProfile-data {
     display: block;
     width: 1000px;
     height: 40px;
@@ -42,16 +41,14 @@
     padding-top: 20px;
 }
 
-.formProfile-label{
+.formProfile-label {
     padding: 8px;
     display: flex;
     align-items: flex-start;
     font-size: 12px;
-
-
 }
 
-.profile-h1{
+.profile-h1 {
     font-family: "Rubik Medium", sans-serif;
     font-size: 60px;
     color: white;
@@ -62,10 +59,9 @@
     margin: auto;
     padding-top: 100px;
     padding-bottom: 50px;
-
 }
 
-.update-btn{
+.update-btn {
     background-color: #E8993D;
     margin-top: 50px;
     padding: 10px;
@@ -75,5 +71,4 @@
     width: 270px;
     border-radius: 30px;
     border-color: #E8993D;
-
 }

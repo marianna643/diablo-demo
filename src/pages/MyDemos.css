@@ -5,14 +5,10 @@
 .add-demo-img {
     display: flex;
     justify-content: left;
-    width:100%;
     padding: 20px;
     margin-right: auto;
     width: 20%;
-    padding: 20px;
-
 }
-
 
 .no-upload {
     text-transform: uppercase;

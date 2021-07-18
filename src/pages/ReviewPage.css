@@ -54,7 +54,7 @@
 }
 
 
-.demoName{
+.demoName {
     font-size: 15px;
 }
 
@@ -80,21 +80,17 @@ a.download-demo:hover {
     color: black;
 }
 
-.reviewUpload-label{
+.reviewUpload-label {
     font-size: 16px;
     color: #E8993D;
     padding-bottom: 30px;
-
-
 }
 
-. reviewMessage {
+.reviewMessage {
     color: white;
 }
 
-
-
-.reviewMessage-message{
+.reviewMessage-message {
     background-color: #E8993D;
     opacity: 0.7 ;
     border-radius: 8px;
@@ -102,8 +98,6 @@ a.download-demo:hover {
     padding-top: 10px;
     font-family: "Rubik Medium", sans-serif;
     color: white;
-
-
 }
 
 .reviewTitle, .reviewMessage-message, .reviewFeedback-comment {
@@ -121,7 +115,6 @@ a.download-demo:hover {
     display: flex;
     align-items: flex-start;
     font-size: 12px;
-
 }
 
 .reviewTitle, .reviewMessage-message {

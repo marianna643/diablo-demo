@@ -42,19 +42,19 @@ function Profile() {
                     {user &&
                     <>
                         <div className="formProfile-group">
-                            <label className="formProfile-label">User name *</label>
+                                <label className="formProfile-label">User name *</label>
                             <div className="formProfile-data">{protectedData.username}</div>
-                            <label className="formProfile-label">First name *</label>
+                                <label className="formProfile-label">First name *</label>
                             <div className="formProfile-data">{protectedData.firstName}</div>
-                            <label className="formProfile-label">Last name *</label>
+                                <label className="formProfile-label">Last name *</label>
                             <div className="formProfile-data">{protectedData.lastName}</div>
-                            <label className="formProfile-label">Email address *</label>
+                                <label className="formProfile-label">Email address *</label>
                             <div className="formProfile-data">{protectedData.email}</div>
-                            <label className="formProfile-label">Country *</label>
+                                <label className="formProfile-label">Country *</label>
                             <div className="formProfile-data">{protectedData.country}</div>
-                            <label className="formProfile-label">Facebook</label>
+                                <label className="formProfile-label">Facebook</label>
                             <div className="formProfile-data">{protectedData.facebook}</div>
-                            <label className="formProfile-label">Instagram</label>
+                                <label className="formProfile-label">Instagram</label>
                             <div className="formProfile-data">{protectedData.instagram}</div>
                             <button type="button" className="update-btn">
                                 Update
@@ -63,7 +63,7 @@ function Profile() {
                     </>}
                     {error && <p className="message-error">{error}</p>}
                     {!user &&
-                    <p>Please <a href="/login"><strong>sign in</strong></a>to view this page!</p>}
+                    <p>Please <a href="/login">sign in</a>to view this page!</p>}
                 </div>
             </div>
         </>

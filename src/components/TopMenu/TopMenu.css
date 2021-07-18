@@ -7,6 +7,7 @@
     left: 20px;
     top: 3px;
 }
+
 a, a.home-pagina {
     color: white;
     text-decoration: none;
@@ -20,10 +21,11 @@ a.active-link {
     color: #E8993D;
 }
 
-a.home-pagina.active-link{
+a.home-pagina.active-link {
     color: white;
 }
-a.home-pagina:hover{
+
+a.home-pagina:hover {
     color: #E8993D;
 }
 
@@ -41,7 +43,6 @@ nav {
     justify-content: flex-end;
     height: 40px;
     border-bottom: 1px solid white;
-
 }
 
 ul {
@@ -52,15 +53,13 @@ ul {
     align-items: flex-end;
     text-transform: uppercase;
     letter-spacing: 1px;
-
-
 }
 
 .active-link {
     color:white;
 }
 
-h4{
+h4 {
     color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-size: 32px;
@@ -68,8 +67,6 @@ h4{
     position: absolute;
     left: 20px;
     top: 3px;
-
-
 }
 
 

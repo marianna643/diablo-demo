@@ -9,7 +9,7 @@
     border: none;
 }
 
-.upload-h1{
+.upload-h1 {
     font-family:"Rubik Medium", sans-serif;
     font-size: 60px;
     color: white;
@@ -20,14 +20,14 @@
     margin-bottom:30px;
 }
 
-.upload-h3{
+.upload-h3 {
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     text-transform: none;
     color:white;
 }
 
-.upload{
+.upload {
     margin: auto;
     padding: 25px;
     width: 100%;
@@ -48,29 +48,26 @@ input, label {
     color: white;
 }
 
-input.form-upload{
+input.form-upload {
     width: 1000px;
     height: 40px;
     border-radius: 0px;
     margin-bottom: 20px;
     font-size: 15px;
     color: white;
-
 }
 
-label.form-title{
+label.form-title {
     padding: 8px;
     display: flex;
     align-items: flex-start;
 
 }
-.submit-container{
+.submit-container {
     width: 1000px;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-
-
 }
 
 .submit-btn {
@@ -85,9 +82,7 @@ label.form-title{
     border-color: #E8993D;
 }
 
-
-
-.mp3-btn{
+.mp3-btn {
     margin-left: 30px;
     padding: 6px;
     font-family: "Rubik Medium", sans-serif;
@@ -100,8 +95,6 @@ label.form-title{
     background-color: Transparent;
     background-repeat:no-repeat;
 }
-
-*/
 
 .page-container {
     display: flex;
@@ -151,6 +144,6 @@ label.form-title{
     border-color: #E8993D;
 }
 
-.uploadProgress-line{
+.uploadProgress-line {
     text-transform: uppercase;
 }

@@ -1,8 +1,8 @@
-p{
+p {
     color:white;
 }
 
-a.termsLink{
+a.termsLink {
     font-size: 12px;
     font-family: "Rubik Light", sans-serif;
     text-transform: none;
@@ -13,9 +13,8 @@ a.termsLink{
     align-items: center;
     margin-top:20px;
     padding-top: 20px;
-
 }
 
-.terms-h2{
+.terms-h2 {
     color: white;
 }

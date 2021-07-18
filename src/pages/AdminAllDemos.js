@@ -40,6 +40,7 @@ function AdminAllDemos() {
                                                       name={upload.name}
                                                       artist={upload.artist}
                                                       titel={upload.titel}
+                                                      feedback={upload.feedback}
                                                       children="Check out"
                                                       link={`/api/files/uploads/${upload.id}`}/>
                             })}

@@ -24,6 +24,7 @@ function AuthContextProvider({ children }) {
                     }
                 );
 
+                //Authstate annvullen door axios get
                 setAuthState({
                     ...authState,
                     user: {
@@ -59,6 +60,8 @@ function AuthContextProvider({ children }) {
     }, []);
 
     function login(data) {
+
+        //accestoken in de localstorage
         localStorage.setItem('token', data.accessToken);
         setAuthState({
             ...authState,
@@ -72,12 +75,12 @@ function AuthContextProvider({ children }) {
                 country: data.country,
                 facebook: data.facebook,
                 instagram: data.instagram,
-                isAdmin: data.roles.includes("ROLE_ADMIN"),
             }
         })
     }
 
     function logout() {
+        //clear accestoken uit van localstorage
         localStorage.clear();
         setAuthState({
             ...authState,
@@ -94,14 +97,12 @@ function AuthContextProvider({ children }) {
 
 function useAuthState() {
     const authState = useContext(authContext);
-    const isDone = authState.status === 'done';
+    const isDone = authState.status === 'done'; //geauthoriseerd wanneer status is done
     const isAuthenticated = authState.user !== null && isDone;
-    const isAdmin = authState.user !== null && authState.user.isAdmin;
 
     return {
         ...authState,
         isAuthenticated: isAuthenticated,
-        isAdmin: isAdmin,
     }
 }
 
