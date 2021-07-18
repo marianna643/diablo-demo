@@ -75,7 +75,6 @@ function AuthContextProvider({ children }) {
                 country: data.country,
                 facebook: data.facebook,
                 instagram: data.instagram,
-                isAdmin: data.roles.includes("ROLE_ADMIN"),
             }
         })
     }
@@ -100,12 +99,10 @@ function useAuthState() {
     const authState = useContext(authContext);
     const isDone = authState.status === 'done'; //geauthoriseerd wanneer status is done
     const isAuthenticated = authState.user !== null && isDone;
-    const isAdmin = authState.user !== null && authState.user.isAdmin; // admin als de gebruiker in de Autstate en status is done and heeft isAdmin attribuut
 
     return {
         ...authState,
         isAuthenticated: isAuthenticated,
-        isAdmin: isAdmin,
     }
 }
 

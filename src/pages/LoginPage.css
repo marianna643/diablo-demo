@@ -1,4 +1,4 @@
-.background-container{
+.background-container {
     background-image: url(../assets/feest_achtergrond.jpg);
     height: 100vh;
     background-position: center;
@@ -7,7 +7,6 @@
     padding: 0vh;
     margin: 0vh ;
     border: none;
-
 }
 
 .titel-1 {
@@ -45,12 +44,12 @@
 }
 
 
-.login-tab{
+.login-tab {
     color: white;
 }
 
 
-.form-container{
+.form-container {
     position: fixed;
     top:0;
     left:0;
@@ -61,12 +60,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
 
-.signIn-form{
+.signIn-form {
     position: relative;
     padding: 40px 40px 40px 40px;
     width: 100%;
@@ -77,39 +75,35 @@
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 10px;
-
 }
 
 
 .sign-lab {
     width: 300px;
     text-align: left;
-
 }
-.sign-input{
+
+.sign-input {
     width: 300px;
     height: 40px;
     border-radius: 0px;
     margin-bottom: 8px;
     color: white;
-
 }
 
 input, label {
     display:block;
-
 }
 
-.popup-h3{
+.popup-h3 {
     padding-bottom: 20px;
     margin: 10px;
     font-family: "Rubik Medium",sans-serif;
     text-align: left;
     width: 200px;
-
 }
 
-.sign-btn{
+.sign-btn {
     background-color: #E8993D;
     margin-top: 20px;
     padding: 10px;
@@ -124,7 +118,7 @@ input, label {
 
 
 
-.paragraph-form{
+.paragraph-form {
     text-transform: none;
     font-size: 12px;
     text-space: 1px;
@@ -132,20 +126,18 @@ input, label {
     display: flex;
     justify-content: center;
     padding-top: 20px;
-
 }
 
 a.signUp-link {
     color: #E8993D;
 }
 
-.signUp-link{
+.signUp-link {
     letter-spacing: 1px;
     padding-left: 2px;
 }
 
-.trade-mark{
+.trade-mark {
     display:flex;
     justify-content:flex-start;
-
 }

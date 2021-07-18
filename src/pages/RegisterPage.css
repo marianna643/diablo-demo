@@ -1,4 +1,4 @@
-.background-container{
+.background-container {
     background-image: url(../assets/feest_achtergrond.jpg);
     height: 100vh;
     background-position: center;
@@ -7,7 +7,6 @@
     padding: 0vh;
     margin: 0vh ;
     border: none;
-
 }
 
 .titel-1 {
@@ -33,7 +32,7 @@
     text-transform: uppercase;
 }
 
-.button-container{
+.button-container {
     height: 20vh;
     width: auto;
     background-color: #06070C;
@@ -42,11 +41,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 50vh;
-
 }
 
 
-.signIn-button{
+.signIn-button {
     font-family: "Rubik Medium", sans-serif;
     font-size: 18px;
     color: #ffffff;
@@ -63,7 +61,7 @@
 }
 
 
-.form-container{
+.form-container {
     position: fixed;
     top:0;
     left:0;
@@ -73,12 +71,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.signUp-form{
+.signUp-form {
     position: relative;
-    padding: 50px 60px 0px 40px;
+    padding: 50px 60px 50px 40px;
     width: 100%;
     max-width: 300px;
     background-color: #06070C;
@@ -87,34 +84,31 @@
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 10px;
-
 }
-
-
 
 .sign-lab {
     width: 300px;
     text-align: left;
-
 }
-.sign-input{
+
+.sign-input {
     width: 300px;
     height: 40px;
-    /*border-radius: 10px;*/
     margin-bottom: 5px;
 }
-input{
+
+input {
     background: transparent;
     border: none;
     border-bottom: 1px solid white;
-
 }
 
-input:focus{
+input:focus {
     outline: none !important;
     background: #1f1f24;
     border-color:#1f1f24 ;
 }
+
 textarea:focus {
     outline: none !important;
     border-color: #1f1f24;
@@ -127,14 +121,14 @@ input, label {
     letter-spacing: 1px;
 }
 
-.popup-h3{
+.popup-h3 {
     padding: 0px;
     margin: 10px;
     font-family: "Rubik Medium",sans-serif;
     text-align: left;
 }
 
-.sign-btn{
+.sign-btn {
     background-color: #E8993D;
     margin-top: 20px;
     padding: 10px;
@@ -157,7 +151,7 @@ input, label {
     letter-spacing: 1px;
 }
 
-.paragraph-form{
+.paragraph-form {
     text-transform: none;
     font-size: 12px;
     text-space: 1px;
@@ -165,12 +159,11 @@ input, label {
     display: flex;
     justify-content: center;
     padding-top: 20px;
-
 }
 
 a.signIn-link {color: #E8993D;}
 
-.signIn-link{
+.signIn-link {
     letter-spacing: 1px;
     padding-left: 2px;
 }

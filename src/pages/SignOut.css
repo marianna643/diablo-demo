@@ -1,11 +1,9 @@
-.signOut-container{
+.signOut-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 300px;
-
-
 }
 
 .sign-h1 {
@@ -14,10 +12,9 @@
     font-size: 35px;
     color: white;
     padding-bottom: 50px;
-
 }
 
-.logIn-btn{
+.logIn-btn {
     background-color: #E8993D;
     font-family: "Rubik Medium", sans-serif;
     font-size: 22px;
@@ -27,5 +24,4 @@
     width: 270px;
     border-radius: 30px;
     border-color: #E8993D;
-
 }

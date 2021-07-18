@@ -1,5 +1,4 @@
-
-.itemCard-image-container{
+.itemCard-image-container {
     display: flex;
     flex-direction: column;
     height: 80px;
@@ -9,8 +8,6 @@
     border-width: thin;
     color: white;
     padding:10px;
-
-
 }
 
 
@@ -46,7 +43,6 @@
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-
 }
 
 .feedback-container {
@@ -56,8 +52,6 @@
     padding-left: 8px;
     font-family: "Rubik Medium", sans-serif;
     opacity: 0.8;
-
-
 }
 
 .item-container {
@@ -70,10 +64,9 @@
     box-shadow: 6px 5px 2px #121215;
     margin-left: 10px;
     margin-top: 10px;
-
 }
 
-.cardTitle-label, .cardArtist-label, .cardSong-label, .cardMessage-label, .feedbackAdmin-label{
+.cardTitle-label, .cardArtist-label, .cardSong-label, .cardMessage-label, .feedbackAdmin-label {
     font-family: "Rubik Medium", sans-serif;
     font-size: 13px;
 }

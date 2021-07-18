@@ -2,13 +2,11 @@ import React, {useEffect, useState} from "react";
 import "./ReviewPage.css"
 import axios from "axios";
 import {useParams} from "react-router";
-import {useAuthState} from "../components/context/AuthContext";
 
 function ReviewPage() {
     const {id} = useParams();
     const [error, setError] = useState('');
     const [upload, setUpload] = useState([]);
-    const {isAdmin} = useAuthState();
     const [protectedData, setProtectedData] = useState([])
     const [feedback, setFeedback] = useState('');
 
