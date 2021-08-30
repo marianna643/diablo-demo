@@ -32,18 +32,6 @@
     text-transform: uppercase;
 }
 
-.button-container {
-    height: 20vh;
-    width: auto;
-    background-color: #06070C;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50vh;
-}
-
-
 .signIn-button {
     font-family: "Rubik Medium", sans-serif;
     font-size: 18px;
@@ -75,7 +63,8 @@
 
 .signUp-form {
     position: relative;
-    padding: 50px 60px 50px 40px;
+    padding: 25px 60px 50px 40px;
+    margin-bottom:50px;
     width: 100%;
     max-width: 300px;
     background-color: #06070C;
@@ -97,33 +86,9 @@
     margin-bottom: 5px;
 }
 
-input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-}
-
-input:focus {
-    outline: none !important;
-    background: #1f1f24;
-    border-color:#1f1f24 ;
-}
-
-textarea:focus {
-    outline: none !important;
-    border-color: #1f1f24;
-}
-
-input, label {
-    display:block;
-    text-transform: none;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
 .popup-h3 {
     padding: 0px;
-    margin: 10px;
+    margin: 10px 10px 30px 10px;
     font-family: "Rubik Medium",sans-serif;
     text-align: left;
 }
@@ -139,16 +104,6 @@ input, label {
     width: 300px;
     border-radius: 30px;
     border-color: #E8993D;
-}
-
-.errorMessage {
-    color: red;
-    font-family: "Rubik Medium", sans-serif;
-    height: auto;
-    background-color: #06070C;
-    font-size: 10px;
-    text-transform: none;
-    letter-spacing: 1px;
 }
 
 .paragraph-form {

@@ -5,12 +5,13 @@ import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
 import {authContext, useAuthState} from "../components/context/AuthContext";
 import './LoginPage.css';
+import Input from "../components/input/Input";
 import Footer from "../components/footer/Footer"
 
 function Login(){
     const { login } = useContext(authContext);
     const { isAuthenticated } = useAuthState();
-    const { handleSubmit, register } = useForm();
+    const { handleSubmit, register, formState: { errors } } = useForm();
     console.log("AUTH STUFF:", login);
     const history = useHistory();
 
@@ -29,7 +30,7 @@ function Login(){
             login(response.data);
         } catch(e) {
             console.error(e);
-            console.log("Inloggen is mislukt", e);
+            console.log("Login failed.", e);
 
         }
     }
@@ -44,25 +45,29 @@ function Login(){
             <div className="form-container">
                 <form className="signIn-form" onSubmit={handleSubmit(onSubmit)}>
                     <h3 className="popup-h3">Sign in</h3>
-                    <label className="sign-lab" htmlFor="email-field">
+                    <Input
+                        type="username"
+                        id="email-field"
+                        name="username"
+                        register={register}
+                        required={true}
+                        requiredError="This field is required."
+                        errors={errors}
+                    >
                         Username: *
-                        <input className="sign-input"
-                               type="username"
-                               id="email-field"
-                               name="username"
-                               {...register("username")}
-                        />
-                    </label>
+                    </Input>
 
-                    <label className="sign-lab" htmlFor="password-field">
+                    <Input
+                        type="password"
+                        id="password-field"
+                        name="password"
+                        register={register}
+                        required={true}
+                        requiredError="This field is required."
+                        errors={errors}
+                    >
                         Password: *
-                        <input className="sign-input"
-                               type="password"
-                               id="password-field"
-                               name="password"
-                               {...register("password")}
-                        />
-                    </label>
+                    </Input>
                     <button type="submit" className="sign-btn">
                         Sign in
                     </button>

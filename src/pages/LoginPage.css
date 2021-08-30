@@ -32,18 +32,6 @@
     text-transform: uppercase;
 }
 
-.button-container {
-    background-color: #06070C;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-}
-
-
 .login-tab {
     color: white;
 }
@@ -89,10 +77,6 @@
     border-radius: 0px;
     margin-bottom: 8px;
     color: white;
-}
-
-input, label {
-    display:block;
 }
 
 .popup-h3 {
