@@ -120,12 +120,6 @@ label.form-title {
     height: 30px;
 }
 
-.form-input-comment {
-    resize: none;
-    width: 100%;
-    margin: 10px 0;
-}
-
 .uploadProgress-line {
     text-transform: uppercase;
 }
