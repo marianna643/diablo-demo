@@ -6,6 +6,7 @@ import axios from "axios";
 import {authContext, useAuthState} from "../components/context/AuthContext";
 import './LoginPage.css';
 import Input from "../components/input/Input";
+import Button from "../components/button/Button";
 import Footer from "../components/footer/Footer"
 
 function Login(){
@@ -14,6 +15,9 @@ function Login(){
     const { handleSubmit, register, formState: { errors } } = useForm();
     console.log("AUTH STUFF:", login);
     const history = useHistory();
+
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         if (isAuthenticated === true) {
@@ -68,9 +72,10 @@ function Login(){
                     >
                         Password: *
                     </Input>
-                    <button type="submit" className="sign-btn">
-                        Sign in
-                    </button>
+                    <Button type="submit" className="sign-btn" disabled={loading}>
+                        {loading ? "signing in" : "Sign in"}
+                    </Button>
+                    {error && <p>{error}</p>}
                     <p className="paragraph-form">New to Demo Drop? <Link className="signUp-link"to="/signup">Create an account.</Link> </p>
                 </form>
             </div>

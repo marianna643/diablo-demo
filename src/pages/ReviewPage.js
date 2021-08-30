@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./ReviewPage.css"
 import axios from "axios";
 import {useParams} from "react-router";
+import Button from "../components/button/Button";
 
 function ReviewPage() {
     const {id} = useParams();
@@ -93,7 +94,7 @@ function ReviewPage() {
                                value={feedback}
                                onChange={(e) => setFeedback(e.target.value)}
                         />
-                        <button type='submit' className= "submit-btn">Submit</button>
+                        <Button type='submit' className= "submit-btn">Submit</Button>
 
                         <div className="audio-container">
                             <audio controls src={upload.downloadUrl} type="audio/mpeg">

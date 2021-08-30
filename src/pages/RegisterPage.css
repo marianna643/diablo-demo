@@ -93,19 +93,6 @@
     text-align: left;
 }
 
-.sign-btn {
-    background-color: #E8993D;
-    margin-top: 20px;
-    padding: 10px;
-    font-family: "Rubik Medium", sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-    color: white;
-    width: 300px;
-    border-radius: 30px;
-    border-color: #E8993D;
-}
-
 .paragraph-form {
     text-transform: none;
     font-size: 12px;

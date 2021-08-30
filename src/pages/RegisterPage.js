@@ -5,6 +5,7 @@ import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/footer/Footer";
 import Input from "../components/input/Input";
+import Button from "../components/button/Button";
 
 
 
@@ -167,9 +168,9 @@ function Register() {
                                     Instagram
                                 </Input>
 
-                                <button type="submit" className="sign-btn" disabled={loading}>
+                                <Button type="submit" className="sign-btn" disabled={loading}>
                                     {loading ? "signing up" : "Sign up"}
-                                </button>
+                                </Button>
                                 {error && <p>{error}</p>}
                                 <p className="paragraph-form">Do you have an account? <Link className="signIn-link"to="/login">Sign In</Link>{" "} </p>
                             </div>

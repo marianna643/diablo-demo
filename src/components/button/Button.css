@@ -1,0 +1,13 @@
+.sign-btn{
+    background-color: #E8993D;
+    margin-top: 20px;
+    padding: 10px;
+    font-family: "Rubik Medium", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: white;
+    width: 300px;
+    border-radius: 30px;
+    border-color: #E8993D;
+}
