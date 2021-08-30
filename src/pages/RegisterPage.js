@@ -18,7 +18,7 @@ function Register() {
 
 
     async function onSubmit(data) {
-        // console.log("DATA VAN DE GEBRUIKER??", data);
+
         try {
             const response = await axios.post('http://localhost:8081/api/auth/signup', {
                 username: data.username,

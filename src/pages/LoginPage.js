@@ -13,7 +13,7 @@ function Login(){
     const { login } = useContext(authContext);
     const { isAuthenticated } = useAuthState();
     const { handleSubmit, register, formState: { errors } } = useForm();
-    console.log("AUTH STUFF:", login);
+
     const history = useHistory();
 
     const [error, setError] = useState('');
