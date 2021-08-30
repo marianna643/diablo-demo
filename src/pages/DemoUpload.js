@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import "./DemoUpload.css"
 import axios from "axios";
+import Button from "../components/button/Button";
 
 function Upload() {
     const [uploadProgress, setUploadProgress] = useState('')
@@ -110,9 +111,7 @@ function Upload() {
                                 />
                             </div>
                             {uploadProgress && <p className="uploadProgress-line">{uploadProgress}</p>}
-                            <button type="submit" className="submit-btn">
-                                Submit
-                            </button>
+                            <Button type='submit' className= "submit-btn">Submit</Button>
                         </form>
                     </div>
                 </div>
