@@ -5,6 +5,7 @@ import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
 import {authContext, useAuthState} from "../components/context/AuthContext";
 import './LoginPage.css';
+import Footer from "../components/footer/Footer"
 
 function Login(){
     const { login } = useContext(authContext);
@@ -68,10 +69,7 @@ function Login(){
                     <p className="paragraph-form">New to Demo Drop? <Link className="signUp-link"to="/signup">Create an account.</Link> </p>
                 </form>
             </div>
-            <div className="button-container">
-                <Link className="termsLink" to="/terms-service"> Terms of Service </Link>
-                {/*<p className="trade-mark">@2021 Demo Drop</p>*/}
-            </div>
+            <Footer />
         </>
     );
 }

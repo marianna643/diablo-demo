@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import './RegisterPage.css';
 import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
+import Footer from "../components/footer/Footer";
 
 
 
@@ -193,8 +194,9 @@ function Register() {
                         </form>
                         )}
                     </div>
+                    <Footer />
                 </div>
-            </div>>
+            </div>
         </>
     );
 }
