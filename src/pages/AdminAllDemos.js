@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import "./AdminAllDemos.css"
-import AdminItemCard from "../components/itemCard/AdminItemCard";
+import ItemCard from "../components/itemCard/ItemCard";
 import axios from "axios";
 
 
@@ -34,7 +34,7 @@ function AdminAllDemos() {
                     <>
                         <div className="pageCard-container">
                             {uploads.map((upload)=>{
-                                return <AdminItemCard title={upload.demo}
+                                return <ItemCard title={upload.demo}
                                                       message={upload.message}
                                                       key={upload.id}
                                                       name={upload.name}
