@@ -4,10 +4,8 @@ import "./TextArea.css"
 function TextArea({ children, type, id, value, onChange, accept, rows}) {
     return (
         <>
-            <div className="form-item">
-                <label htmlFor={id}
-                       className="form-title"
-                >
+            <div className="form-item-container">
+                <label htmlFor={id}>
                     {children}
                     <textarea
                         className="form-comment"
