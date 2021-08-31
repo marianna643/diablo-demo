@@ -32,18 +32,6 @@
     text-transform: uppercase;
 }
 
-.button-container {
-    background-color: #06070C;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-}
-
-
 .login-tab {
     color: white;
 }
@@ -91,10 +79,6 @@
     color: white;
 }
 
-input, label {
-    display:block;
-}
-
 .popup-h3 {
     padding-bottom: 20px;
     margin: 10px;
@@ -102,21 +86,6 @@ input, label {
     text-align: left;
     width: 200px;
 }
-
-.sign-btn {
-    background-color: #E8993D;
-    margin-top: 20px;
-    padding: 10px;
-    font-family: "Rubik Medium", sans-serif;
-    font-size: 22px;
-    color: white;
-    width: 300px;
-    border-radius: 30px;
-    border-color: #E8993D;
-    letter-spacing: 3px;
-}
-
-
 
 .paragraph-form {
     text-transform: none;

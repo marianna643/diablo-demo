@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "./DemoUpload.css"
 import axios from "axios";
+import Button from "../components/button/Button";
+import TextArea from "../components/textArea/TextArea";
 
 function Upload() {
     const [uploadProgress, setUploadProgress] = useState('')
@@ -99,20 +101,17 @@ function Upload() {
                                        onChange={(e) => setTitel(e.target.value)}>
                                 </input>
                             </div>
-                            <div className="form-item">
-                                <label className="form-title">Comment</label>
-                                <textarea className="form-input-comment"
+                                <TextArea className="form-comment"
                                           name="comment"
                                           rows="5"
                                           value={message}
                                           required
                                           onChange={(e) => setMessage(e.target.value)}
-                                />
-                            </div>
+                                          >
+                                          Comment
+                                </TextArea>
                             {uploadProgress && <p className="uploadProgress-line">{uploadProgress}</p>}
-                            <button type="submit" className="submit-btn">
-                                Submit
-                            </button>
+                            <Button type='submit' className= "submit-btn">Submit</Button>
                         </form>
                     </div>
                 </div>

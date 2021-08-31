@@ -2,7 +2,7 @@ import React from "react";
 import "./MyDemos.css";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import UserItemCard from "../components/itemCard/UserItemCard";
+import ItemCard from "../components/itemCard/ItemCard";
 import {Link} from "react-router-dom";
 import disc from "../assets/adddemo.png";
 
@@ -39,14 +39,12 @@ function MyDemos() {
                     <>
                         <div className="pageCard-container">
                             {uploads.map((upload)=>{
-                                return <UserItemCard title={upload.demo}
+                                return <ItemCard title={upload.demo}
                                                      message={upload.message}
                                                      key={upload.id}
                                                      name={upload.name}
                                                      artist={upload.artist}
                                                      titel={upload.titel}
-                                                     children="open"
-                                                     link={`/api/files/uploads/${upload.id}`}
                                                      feedback={upload.feedback}/>
                             })}
                         </div>

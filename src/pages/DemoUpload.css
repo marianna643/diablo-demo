@@ -43,11 +43,6 @@
     letter-spacing: 1px;
 }
 
-input, label {
-    display: block;
-    color: white;
-}
-
 input.form-upload {
     width: 1000px;
     height: 40px;
@@ -55,6 +50,9 @@ input.form-upload {
     margin-bottom: 20px;
     font-size: 15px;
     color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
 }
 
 label.form-title {
@@ -68,18 +66,6 @@ label.form-title {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-}
-
-.submit-btn {
-    background-color: #E8993D;
-    margin-top: 50px;
-    padding: 10px;
-    font-family: "Rubik Medium", sans-serif;
-    font-size: 22px;
-    color: white;
-    width: 270px;
-    border-radius: 30px;
-    border-color: #E8993D;
 }
 
 .mp3-btn {
@@ -123,25 +109,6 @@ label.form-title {
     width: 100%;
     margin: 10px 0;
     height: 30px;
-}
-
-.form-input-comment {
-    resize: none;
-    width: 100%;
-    margin: 10px 0;
-}
-
-
-.submit-btn {
-    background-color: #E8993D;
-    margin-top: 50px;
-    padding: 10px;
-    font-family: "Rubik Medium", sans-serif;
-    font-size: 22px;
-    color: white;
-    width: 270px;
-    border-radius: 30px;
-    border-color: #E8993D;
 }
 
 .uploadProgress-line {

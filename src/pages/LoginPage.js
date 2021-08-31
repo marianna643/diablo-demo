@@ -5,13 +5,19 @@ import {Link, useHistory} from "react-router-dom";
 import axios from "axios";
 import {authContext, useAuthState} from "../components/context/AuthContext";
 import './LoginPage.css';
+import Input from "../components/input/Input";
+import Button from "../components/button/Button";
+import Footer from "../components/footer/Footer"
 
 function Login(){
     const { login } = useContext(authContext);
     const { isAuthenticated } = useAuthState();
-    const { handleSubmit, register } = useForm();
-    console.log("AUTH STUFF:", login);
+    const { handleSubmit, register, formState: { errors } } = useForm();
+
     const history = useHistory();
+
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         if (isAuthenticated === true) {
@@ -28,7 +34,7 @@ function Login(){
             login(response.data);
         } catch(e) {
             console.error(e);
-            console.log("Inloggen is mislukt", e);
+            console.log("Login failed.", e);
 
         }
     }
@@ -43,35 +49,37 @@ function Login(){
             <div className="form-container">
                 <form className="signIn-form" onSubmit={handleSubmit(onSubmit)}>
                     <h3 className="popup-h3">Sign in</h3>
-                    <label className="sign-lab" htmlFor="email-field">
+                    <Input
+                        type="username"
+                        id="email-field"
+                        name="username"
+                        register={register}
+                        required={true}
+                        requiredError="This field is required."
+                        errors={errors}
+                    >
                         Username: *
-                        <input className="sign-input"
-                               type="username"
-                               id="email-field"
-                               name="username"
-                               {...register("username")}
-                        />
-                    </label>
+                    </Input>
 
-                    <label className="sign-lab" htmlFor="password-field">
+                    <Input
+                        type="password"
+                        id="password-field"
+                        name="password"
+                        register={register}
+                        required={true}
+                        requiredError="This field is required."
+                        errors={errors}
+                    >
                         Password: *
-                        <input className="sign-input"
-                               type="password"
-                               id="password-field"
-                               name="password"
-                               {...register("password")}
-                        />
-                    </label>
-                    <button type="submit" className="sign-btn">
-                        Sign in
-                    </button>
+                    </Input>
+                    <Button type="submit" className="sign-btn" disabled={loading}>
+                        {loading ? "signing in" : "Sign in"}
+                    </Button>
+                    {error && <p>{error}</p>}
                     <p className="paragraph-form">New to Demo Drop? <Link className="signUp-link"to="/signup">Create an account.</Link> </p>
                 </form>
             </div>
-            <div className="button-container">
-                <Link className="termsLink" to="/terms-service"> Terms of Service </Link>
-                {/*<p className="trade-mark">@2021 Demo Drop</p>*/}
-            </div>
+            <Footer />
         </>
     );
 }
