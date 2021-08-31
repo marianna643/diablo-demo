@@ -21,7 +21,8 @@ function ItemCard({ children, title, message,link, name, artist, titel, feedback
                             <p className="cardSongTitel">{titel}</p>
                     </div>
                     <div className="message-container">
-                            <p className="cardMessage">Message from uploader:{message}</p>
+                        <label className="cardMessage-label">Message from uploader</label>
+                            <p className="cardMessage">{message}</p>
                     </div>
                     <div className="feedback-container">
                             <p className="cardFeedback">Feedback: {feedback}</p>

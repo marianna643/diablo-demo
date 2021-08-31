@@ -1,4 +1,4 @@
-.sign-btn{
+.sign-btn, .submit-btn {
     background-color: #E8993D;
     margin-top: 20px;
     padding: 10px;
@@ -10,4 +10,10 @@
     width: 300px;
     border-radius: 30px;
     border-color: #E8993D;
+}
+
+
+.submit-btn {
+    margin-top: 50px;
+    width: 270px;
 }

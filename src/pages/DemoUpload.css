@@ -50,6 +50,9 @@ input.form-upload {
     margin-bottom: 20px;
     font-size: 15px;
     color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
 }
 
 label.form-title {
@@ -63,18 +66,6 @@ label.form-title {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-}
-
-.submit-btn {
-    background-color: #E8993D;
-    margin-top: 50px;
-    padding: 10px;
-    font-family: "Rubik Medium", sans-serif;
-    font-size: 22px;
-    color: white;
-    width: 270px;
-    border-radius: 30px;
-    border-color: #E8993D;
 }
 
 .mp3-btn {
