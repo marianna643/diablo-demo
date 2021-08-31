@@ -175,7 +175,6 @@ function Register() {
                                 <p className="paragraph-form">Do you have an account? <Link className="signIn-link"to="/login">Sign In</Link>{" "} </p>
                             </div>
                         </form>
-                        )}
                     </div>
                     <Footer />
             </div>

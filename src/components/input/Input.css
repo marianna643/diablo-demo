@@ -8,11 +8,12 @@
     letter-spacing: 1px;
 }
 
-input:focus{
+input:focus {
     outline: none !important;
     background: #1f1f24;
     border-color:#1f1f24 ;
 }
+
 textarea:focus {
     outline: none !important;
     border-color: #1f1f24;
@@ -27,7 +28,7 @@ input, label {
     text-align: left;
 }
 
-.textInput{
+.textInput {
     background: transparent;
     border: none;
     border-bottom: 1px solid white;
